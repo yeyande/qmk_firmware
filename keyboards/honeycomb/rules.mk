@@ -30,4 +30,9 @@ UNICODE_ENABLE = YES 		# Unicode
 # BLUETOOTH_ENABLE = yes # Enable Bluetooth with the Adafruit EZ-Key HID
 
 # # project specific files
-SRC += matrix.c serial_uart.c
+SRC += matrix.c
+
+USB = /dev/ttyACM0
+
+#upload: build
+#	$(honeycomb_UPLOAD_COMMAND)

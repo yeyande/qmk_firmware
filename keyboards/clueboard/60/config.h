@@ -25,6 +25,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Clueboard
 #define PRODUCT         Clueboard 60%
+#define DESCRIPTION     Clueboard 60%
 
 /* Address for jumping to bootloader on STM32 chips. */
 /* It is chip dependent, the correct number can be looked up here:
@@ -101,6 +102,9 @@
  * MIDI options
  */
 
+/* Prevent use of disabled MIDI features in the keymap */
+//#define MIDI_ENABLE_STRICT 1
+
 /* enable basic MIDI features:
    - MIDI notes can be sent when in Music mode is on
 */
@@ -117,8 +121,6 @@
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 1
 
-#define LED_CAPS_LOCK_PIN B7
-
-/* Backlight configuration
+ /* Backlight configuration
  */
 #define BACKLIGHT_LEVELS 1

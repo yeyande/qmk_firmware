@@ -31,7 +31,12 @@ MIDI_ENABLE = no 		# MIDI controls
 UNICODE_ENABLE = yes 		# Unicode
 BLUETOOTH_ENABLE = no # Enable Bluetooth with the Adafruit EZ-Key HID
 
-# # project specific files
-SRC += matrix.c serial_uart.c
+USB = /dev/ttyACM0
 
-LAYOUTS = split_3x5_3 split_3x6_3
+# upload: build
+# 	$(CENTROMERE_UPLOAD_COMMAND)
+
+OPT_DEFS += -DCENTROMERE_PROMICRO
+
+# # project specific files
+SRC = matrix.c

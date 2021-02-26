@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Jotix
 #define PRODUCT         JotPad16
+#define DESCRIPTION     A Jotantastic compact NumPad
 
 /* key matrix size */
 #define MATRIX_ROWS 4

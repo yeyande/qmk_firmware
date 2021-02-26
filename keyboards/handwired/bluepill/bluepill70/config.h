@@ -8,6 +8,7 @@
 //  Modified by Xydane
 #define MANUFACTURER "QMK"
 #define PRODUCT "BluePill70"
+#define DESCRIPTION "QMK keyboard firmware with ChibiOS"
 
 /* key matrix size */
 //  Modified by Xydane

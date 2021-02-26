@@ -17,12 +17,13 @@
 #include <ctype.h>
 #include "quantum.h"
 
-#ifdef BLUETOOTH_ENABLE
+#ifdef PROTOCOL_LUFA
 #    include "outputselect.h"
 #endif
 
 #ifdef BACKLIGHT_ENABLE
 #    include "backlight.h"
+extern backlight_config_t backlight_config;
 #endif
 
 #ifdef FAUXCLICKY_ENABLE
@@ -56,10 +57,6 @@ float default_layer_songs[][16][2] = DEFAULT_LAYER_SONGS;
 #    ifdef SENDSTRING_BELL
 float bell_song[][2] = SONG(TERMINAL_SOUND);
 #    endif
-#endif
-
-#ifdef AUTO_SHIFT_ENABLE
-#    include "process_auto_shift.h"
 #endif
 
 static void do_code16(uint16_t code, void (*f)(uint8_t)) {
@@ -232,9 +229,6 @@ bool process_record_quantum(keyrecord_t *record) {
             process_record_via(keycode, record) &&
 #endif
             process_record_kb(keycode, record) &&
-#if defined(SEQUENCER_ENABLE)
-            process_sequencer(keycode, record) &&
-#endif
 #if defined(MIDI_ENABLE) && defined(MIDI_ADVANCED)
             process_midi(keycode, record) &&
 #endif
@@ -282,9 +276,6 @@ bool process_record_quantum(keyrecord_t *record) {
 #endif
 #if defined(RGBLIGHT_ENABLE) || defined(RGB_MATRIX_ENABLE)
             process_rgb(keycode, record) &&
-#endif
-#ifdef JOYSTICK_ENABLE
-            process_joystick(keycode, record) &&
 #endif
             true)) {
         return false;
@@ -447,7 +438,8 @@ void send_string_with_delay(const char *str, uint8_t interval) {
             if (ascii_code == SS_TAP_CODE) {
                 // tap
                 uint8_t keycode = *(++str);
-                tap_code(keycode);
+                register_code(keycode);
+                unregister_code(keycode);
             } else if (ascii_code == SS_DOWN_CODE) {
                 // down
                 uint8_t keycode = *(++str);
@@ -488,7 +480,8 @@ void send_string_with_delay_P(const char *str, uint8_t interval) {
             if (ascii_code == SS_TAP_CODE) {
                 // tap
                 uint8_t keycode = pgm_read_byte(++str);
-                tap_code(keycode);
+                register_code(keycode);
+                unregister_code(keycode);
             } else if (ascii_code == SS_DOWN_CODE) {
                 // down
                 uint8_t keycode = pgm_read_byte(++str);
@@ -571,22 +564,32 @@ void tap_random_base64(void) {
 #endif
     switch (key) {
         case 0 ... 25:
-            send_char(key + 'A');
+            register_code(KC_LSFT);
+            register_code(key + KC_A);
+            unregister_code(key + KC_A);
+            unregister_code(KC_LSFT);
             break;
         case 26 ... 51:
-            send_char(key - 26 + 'a');
+            register_code(key - 26 + KC_A);
+            unregister_code(key - 26 + KC_A);
             break;
         case 52:
-            send_char('0');
+            register_code(KC_0);
+            unregister_code(KC_0);
             break;
         case 53 ... 61:
-            send_char(key - 53 + '1');
+            register_code(key - 53 + KC_1);
+            unregister_code(key - 53 + KC_1);
             break;
         case 62:
-            send_char('+');
+            register_code(KC_LSFT);
+            register_code(KC_EQL);
+            unregister_code(KC_EQL);
+            unregister_code(KC_LSFT);
             break;
         case 63:
-            send_char('/');
+            register_code(KC_SLSH);
+            unregister_code(KC_SLSH);
             break;
     }
 }
@@ -598,10 +601,6 @@ void matrix_init_quantum() {
     if (!eeconfig_is_enabled()) {
         eeconfig_init();
     }
-#if defined(LED_NUM_LOCK_PIN) || defined(LED_CAPS_LOCK_PIN) || defined(LED_SCROLL_LOCK_PIN) || defined(LED_COMPOSE_PIN) || defined(LED_KANA_PIN)
-    // TODO: remove calls to led_init_ports from keyboards and remove ifdef
-    led_init_ports();
-#endif
 #ifdef BACKLIGHT_ENABLE
 #    ifdef LED_MATRIX_ENABLE
     led_matrix_init();
@@ -621,7 +620,7 @@ void matrix_init_quantum() {
 #ifdef HAPTIC_ENABLE
     haptic_init();
 #endif
-#if defined(BLUETOOTH_ENABLE) && defined(OUTPUT_AUTO_ENABLE)
+#ifdef OUTPUT_AUTO_ENABLE
     set_output(OUTPUT_AUTO);
 #endif
 
@@ -631,10 +630,6 @@ void matrix_init_quantum() {
 void matrix_scan_quantum() {
 #if defined(AUDIO_ENABLE) && !defined(NO_MUSIC_MODE)
     matrix_scan_music();
-#endif
-
-#ifdef SEQUENCER_ENABLE
-    matrix_scan_sequencer();
 #endif
 
 #ifdef TAP_DANCE_ENABLE
@@ -665,10 +660,6 @@ void matrix_scan_quantum() {
     dip_switch_read(false);
 #endif
 
-#ifdef AUTO_SHIFT_ENABLE
-    autoshift_matrix_scan();
-#endif
-
     matrix_scan_kb();
 }
 
@@ -697,7 +688,22 @@ void send_byte(uint8_t number) {
     send_nibble(number & 0xF);
 }
 
-void send_nibble(uint8_t number) { tap_code16(hex_to_keycode(number)); }
+void send_nibble(uint8_t number) {
+    switch (number) {
+        case 0:
+            register_code(KC_0);
+            unregister_code(KC_0);
+            break;
+        case 1 ... 9:
+            register_code(KC_1 + (number - 1));
+            unregister_code(KC_1 + (number - 1));
+            break;
+        case 0xA ... 0xF:
+            register_code(KC_A + (number - 0xA));
+            unregister_code(KC_A + (number - 0xA));
+            break;
+    }
+}
 
 __attribute__((weak)) uint16_t hex_to_keycode(uint8_t hex) {
     hex = hex & 0xF;
@@ -718,6 +724,55 @@ void api_send_unicode(uint32_t unicode) {
 #endif
 }
 
+/** \brief Lock LED set callback - keymap/user level
+ *
+ * \deprecated Use led_update_user() instead.
+ */
+__attribute__((weak)) void led_set_user(uint8_t usb_led) {}
+
+/** \brief Lock LED set callback - keyboard level
+ *
+ * \deprecated Use led_update_kb() instead.
+ */
+__attribute__((weak)) void led_set_kb(uint8_t usb_led) { led_set_user(usb_led); }
+
+/** \brief Lock LED update callback - keymap/user level
+ *
+ * \return True if led_update_kb() should run its own code, false otherwise.
+ */
+__attribute__((weak)) bool led_update_user(led_t led_state) { return true; }
+
+/** \brief Lock LED update callback - keyboard level
+ *
+ * \return Ignored for now.
+ */
+__attribute__((weak)) bool led_update_kb(led_t led_state) { return led_update_user(led_state); }
+
+__attribute__((weak)) void led_init_ports(void) {}
+
+__attribute__((weak)) void led_set(uint8_t usb_led) {
+#if defined(BACKLIGHT_CAPS_LOCK) && defined(BACKLIGHT_ENABLE)
+    // Use backlight as Caps Lock indicator
+    uint8_t bl_toggle_lvl = 0;
+
+    if (IS_LED_ON(usb_led, USB_LED_CAPS_LOCK) && !backlight_config.enable) {
+        // Turning Caps Lock ON and backlight is disabled in config
+        // Toggling backlight to the brightest level
+        bl_toggle_lvl = BACKLIGHT_LEVELS;
+    } else if (IS_LED_OFF(usb_led, USB_LED_CAPS_LOCK) && backlight_config.enable) {
+        // Turning Caps Lock OFF and backlight is enabled in config
+        // Toggling backlight and restoring config level
+        bl_toggle_lvl = backlight_config.level;
+    }
+
+    // Set level without modify backlight_config to keep ability to restore state
+    backlight_set(bl_toggle_lvl);
+#endif
+
+    led_set_kb(usb_led);
+    led_update_kb((led_t)usb_led);
+}
+
 //------------------------------------------------------------------------------
 // Override these functions in your keymap file to play different tunes on
 // different events such as startup and bootloader jump
@@ -725,3 +780,5 @@ void api_send_unicode(uint32_t unicode) {
 __attribute__((weak)) void startup_user() {}
 
 __attribute__((weak)) void shutdown_user() {}
+
+//------------------------------------------------------------------------------

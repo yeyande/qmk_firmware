@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER          0x0001
 #define MANUFACTURER        emdarcher
 #define PRODUCT             Navi10
+#define DESCRIPTION         A simple and fun navigation cluster macropad with retro Sci-Fi vibes.
 
 /* key matrix size */
 #define MATRIX_ROWS 4

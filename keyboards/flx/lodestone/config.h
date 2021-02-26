@@ -24,6 +24,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    FLX
 #define PRODUCT         Lodestone
+#define DESCRIPTION     FLX Lodestone
 
 /* key matrix size */
 #define MATRIX_ROWS 5

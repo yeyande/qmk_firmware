@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    atxkb
 #define PRODUCT         1894
+#define DESCRIPTION     atxkb 1894
 
 /* key matrix size */
 #define MATRIX_ROWS 5

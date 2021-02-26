@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Worldspawn00
 #define PRODUCT         Gothic50
+#define DESCRIPTION     Expanded Ergo Keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 4

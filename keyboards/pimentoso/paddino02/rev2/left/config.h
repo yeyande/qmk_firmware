@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0002
 #define MANUFACTURER    Pimentoso
 #define PRODUCT         Paddino02 rev2
+#define DESCRIPTION     10-key ergo macropad
 
 /* key matrix size */
 #define MATRIX_ROWS 3

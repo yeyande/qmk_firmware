@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER 0x0001
 #define MANUFACTURER asdftemp
 #define PRODUCT Slash
+#define DESCRIPTION 60% keyboard with bluetooth
 
 /* key matrix size */
 #define MATRIX_ROWS 8

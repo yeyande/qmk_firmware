@@ -23,6 +23,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    TheFourthCow
 #define PRODUCT         Funky40
+#define DESCRIPTION     Ortholinear 40 percent keyboard
 
 
 /* key matrix size */

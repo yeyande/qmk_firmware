@@ -24,6 +24,9 @@
 
 #if defined(RGBLIGHT_SLEEP) && defined(RGBLIGHT_ENABLE)
 #    include "rgblight.h"
+extern rgblight_config_t rgblight_config;
+static bool              rgblight_enabled;
+static bool              is_suspended;
 #endif
 
 /** \brief Suspend idle
@@ -101,7 +104,12 @@ static void power_down(uint8_t wdto) {
     // stop_all_notes();
 #    endif /* AUDIO_ENABLE */
 #    if defined(RGBLIGHT_SLEEP) && defined(RGBLIGHT_ENABLE)
-    rgblight_suspend();
+    rgblight_timer_disable();
+    if (!is_suspended) {
+        is_suspended     = true;
+        rgblight_enabled = rgblight_config.enable;
+        rgblight_disable_noeeprom();
+    }
 #    endif
     suspend_power_down_kb();
 
@@ -169,7 +177,14 @@ void suspend_wakeup_init(void) {
 #endif
     led_set(host_keyboard_leds());
 #if defined(RGBLIGHT_SLEEP) && defined(RGBLIGHT_ENABLE)
-    rgblight_wakeup();
+    is_suspended = false;
+    if (rgblight_enabled) {
+#    ifdef BOOTLOADER_TEENSY
+        wait_ms(10);
+#    endif
+        rgblight_enable_noeeprom();
+    }
+    rgblight_timer_enable();
 #endif
     suspend_wakeup_init_kb();
 }

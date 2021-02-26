@@ -2,9 +2,6 @@
 
 #include "helix.h"
 
-bool is_mac_mode(void);
-void set_mac_mode_kb(bool macmode);
-
 #ifndef SPLIT_KEYBOARD
     extern bool is_helix_master(void);
     #define is_keyboard_master() is_helix_master()

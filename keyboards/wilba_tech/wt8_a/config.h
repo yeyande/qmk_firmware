@@ -24,6 +24,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    wilba.tech
 #define PRODUCT         wilba.tech WT8-A
+#define DESCRIPTION     wilba.tech WT8-A
 
 /* key matrix size */
 #define MATRIX_ROWS 1

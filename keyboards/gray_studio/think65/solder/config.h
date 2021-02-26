@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Graystudio
 #define PRODUCT         Think6.5°
+#define DESCRIPTION     Graystudio Think6.5
 
 /* key matrix size */
 #define MATRIX_ROWS 5

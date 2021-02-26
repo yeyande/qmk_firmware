@@ -12,6 +12,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    matrix
 #define PRODUCT         M12OG
+#define DESCRIPTION     Matrix 8XV1.2 OG version
 
 /* key matrix size */
 #define MATRIX_ROWS 7

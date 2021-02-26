@@ -22,6 +22,7 @@
 #define DEVICE_VER      0x0005
 #define MANUFACTURER    Omkbd
 #define PRODUCT         runner3680
+#define DESCRIPTION     A split keyboard
 
 /* key matrix size */
 // Rows are doubled-up

@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    blindassassin111
 #define PRODUCT         AT101_BH PCB
+#define DESCRIPTION     Replacement AT101 PCB
 
 /* key matrix size */
 #define MATRIX_ROWS 12

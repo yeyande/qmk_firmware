@@ -4,7 +4,7 @@
     "width": 18.75, 
     "height": 5, 
     "layouts": {
-        "LAYOUT_alice_split_bs": {
+        "LAYOUT_all": {
             "layout": [
                 {"label":"Esc", "x":0.5, "y":0},
                 {"label":"~", "x":1.75, "y":0},
@@ -74,7 +74,7 @@
                 {"label":"RCtl", "x":17, "y":4, "w":1.5}
             ]
         },
-        "LAYOUT_alice": {
+        "LAYOUT_default": {
             "layout": [
                 {"label":"Esc", "x":0.5, "y":0},
                 {"label":"~", "x":1.75, "y":0},

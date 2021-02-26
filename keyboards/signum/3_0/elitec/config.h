@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0000
 #define MANUFACTURER    troyfletcher
 #define PRODUCT         Signum
+#define DESCRIPTION     q.m.k. keyboard firmware for Signum 3.0
 
 /* mouse settings */
 #define MK_KINETIC_SPEED

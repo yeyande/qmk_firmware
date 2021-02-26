@@ -24,6 +24,7 @@
 #define DEVICE_VER      0x0101
 #define MANUFACTURER    Kumao Kobo
 #define PRODUCT         Pico Keyboard
+#define DESCRIPTION     Split row staggered 5x7 keyboard (using kailh mid-height)
 
 /* key matrix size */
 // Rows are doubled-up

@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    miker
 #define PRODUCT         nek_type_a
+#define DESCRIPTION     NEK Type A
 
 /* key matrix size */
 #define MATRIX_ROWS 6

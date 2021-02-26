@@ -21,13 +21,8 @@ __attribute__((weak)) uint16_t unicodemap_index(uint16_t keycode) {
         // Keycode is a pair: extract index based on Shift / Caps Lock state
         uint16_t index = keycode - QK_UNICODEMAP_PAIR;
 
-        uint8_t mods = get_mods() | get_weak_mods();
-#ifndef NO_ACTION_ONESHOT
-        mods |= get_oneshot_mods();
-#endif
-
-        bool shift = mods & MOD_MASK_SHIFT;
-        bool caps  = host_keyboard_led_state().caps_lock;
+        bool shift = unicode_saved_mods & MOD_MASK_SHIFT;
+        bool caps  = IS_HOST_LED_ON(USB_LED_CAPS_LOCK);
         if (shift ^ caps) {
             index >>= 7;
         }

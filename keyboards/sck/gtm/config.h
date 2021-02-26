@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0002
 #define MANUFACTURER    SpaceCityKeyboards
 #define PRODUCT         GTM Pad
+#define DESCRIPTION     Grand Theft Macro Pad
 
 /* key matrix size */
 #define MATRIX_ROWS 3

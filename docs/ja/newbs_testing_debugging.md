@@ -45,9 +45,7 @@ void keyboard_post_init_user(void) {
 
 [custom code](ja/custom_quantum_functions.md)内からデバッグメッセージを出力すると便利な場合があります。それはとても簡単です。ファイルの先頭に`print.h`のインクルードを追加します:
 
-```c
-#include "print.h"
-```
+    #include <print.h>
 
 そのあとは、いくつかの異なった print 関数を使用することが出来ます。
 

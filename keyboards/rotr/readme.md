@@ -8,13 +8,10 @@ A macro pad with a multipurpose knob.
 * Hardware: [Geekhack](https://geekhack.org/index.php?topic=107104.0)
 
 ## Features:
-* Will ship pre-programmed and ready to use
-* Hot swap sockets
-* USB C
-* RGB LEDs for switches
-* CNC milled aluminium case
-* Solid brass knob
-* Free spinning magnetic rotary encoder
+* Minimal design with plug and play functionality.
+* Frictionless, solid brass knob.
+* Hot swappable switches.
+* USB C connection.
 
 Make example for this keyboard (after setting up your build environment):
 

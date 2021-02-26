@@ -14,8 +14,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
-#pragma once
+#ifndef ACTION_UTIL_H
+#define ACTION_UTIL_H
 
 #include <stdint.h>
 #include "report.h"
@@ -57,11 +57,12 @@ void    set_macro_mods(uint8_t mods);
 void    clear_macro_mods(void);
 
 /* oneshot modifier */
-uint8_t get_oneshot_mods(void);
-void    add_oneshot_mods(uint8_t mods);
-void    del_oneshot_mods(uint8_t mods);
 void    set_oneshot_mods(uint8_t mods);
+uint8_t get_oneshot_mods(void);
 void    clear_oneshot_mods(void);
+void    oneshot_toggle(void);
+void    oneshot_enable(void);
+void    oneshot_disable(void);
 bool    has_oneshot_mods_timed_out(void);
 
 uint8_t get_oneshot_locked_mods(void);
@@ -97,4 +98,6 @@ void clear_oneshot_swaphands(void);
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif

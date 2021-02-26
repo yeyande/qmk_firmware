@@ -1,5 +1,9 @@
 #include "centromere.h"
 
+void uart_init(void) {
+	SERIAL_UART_INIT();
+}
+
 void led_init(void) {
 #if MCU == atmega32u2
     setPinOutput(C4); // Set red LED pin as output
@@ -28,6 +32,7 @@ void matrix_init_kb(void) {
 	// put your keyboard start-up code here
 	// runs once when the firmware starts up
 	matrix_init_user();
+	uart_init();
 	led_init();
 }
 

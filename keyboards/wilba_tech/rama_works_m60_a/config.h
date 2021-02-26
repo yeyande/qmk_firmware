@@ -23,6 +23,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    RAMA WORKS
 #define PRODUCT         RAMA WORKS M60-A
+#define DESCRIPTION     RAMA WORKS M60-A
 
 // key matrix size
 #define MATRIX_ROWS 5

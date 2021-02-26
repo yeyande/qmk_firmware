@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Worldspawn00
 #define PRODUCT         Kodachi50
+#define DESCRIPTION     Mirror stagger 50% keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 8

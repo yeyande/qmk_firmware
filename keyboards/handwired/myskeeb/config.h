@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0100
 #define MANUFACTURER    DAG3
 #define PRODUCT         MySKeeb
+#define DESCRIPTION     Custom Split Keyboard
 
 // Key Matrix Size //
 // Rows are Doubled-up

@@ -22,6 +22,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Spaceman
 #define PRODUCT         DDG_56
+#define DESCRIPTION     DDG_56
 
 /* key matrix size */
 #define MATRIX_ROWS 5

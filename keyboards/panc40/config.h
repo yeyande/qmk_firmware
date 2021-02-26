@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Panc Interactive
 #define PRODUCT         Panc40
+#define DESCRIPTION     QMK Firmware for Panc40
 
 /* key matrix size */
 #define MATRIX_ROWS 4

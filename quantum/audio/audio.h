@@ -13,8 +13,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-#pragma once
+#ifndef AUDIO_H
+#define AUDIO_H
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -103,3 +103,5 @@ void play_notes(float (*np)[][2], uint16_t n_count, bool n_repeat);
 #define PLAY_LOOP(note_array) play_notes(&note_array, NOTE_ARRAY_SIZE((note_array)), true)
 
 bool is_playing_notes(void);
+
+#endif

@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0200
 #define MANUFACTURER    YMDK
 #define PRODUCT SP64
+#define DESCRIPTION YMDK Split 64
 
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 15

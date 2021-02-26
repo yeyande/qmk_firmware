@@ -23,6 +23,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    zvecr
 #define PRODUCT         zv48
+#define DESCRIPTION     ARM Split ortho_4x12
 
 /* key matrix size */
 #define MATRIX_ROWS 8 // Rows are doubled-up

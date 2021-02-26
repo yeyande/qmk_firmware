@@ -8,6 +8,7 @@
 #define DEVICE_VER      0x0003
 #define MANUFACTURER    nglgzz
 #define PRODUCT         42
+#define DESCRIPTION     BT
 
 /* key matrix size */
 #define MATRIX_ROWS 4

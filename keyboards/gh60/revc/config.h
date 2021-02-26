@@ -25,6 +25,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER   0x0001
 #define MANUFACTURER    geekhack
 #define PRODUCT         GH60 Rev C
+#define DESCRIPTION     t.m.k. keyboard firmware for GH60
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -55,9 +56,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
-
-#define LED_CAPS_LOCK_PIN B2
-#define LED_PIN_ON_STATE 0
 
 /* number of backlight levels */
 #define BACKLIGHT_LEVELS 3

@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    xyxjj
 #define PRODUCT         DeltaSplit75
+#define DESCRIPTION     75% split keyboard
 
 /* key matrix size */
 // Rows are doubled-up

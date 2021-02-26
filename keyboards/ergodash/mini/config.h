@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0100
 #define MANUFACTURER    Omkbd
 #define PRODUCT         ErgoDashmini
+#define DESCRIPTION     Power
 
 /* key matrix size */
 // Rows are doubled-up

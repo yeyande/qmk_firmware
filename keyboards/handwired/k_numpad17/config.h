@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Handwired
 #define PRODUCT         K-Numpad17
+#define DESCRIPTION     QMK keyboard firmware for handwired numpad with 17 keys
 
 #define TAPPING_TERM 400
 

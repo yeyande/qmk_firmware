@@ -28,8 +28,3 @@ RGBLIGHT_ENABLE = no
 UNICODEMAP_ENABLE = no
 
 LAYOUTS = ortho_4x12
-
-# Disable unsupported hardware
-RGBLIGHT_SUPPORTED = no
-AUDIO_SUPPORTED = no
-BACKLIGHT_SUPPORTED = no

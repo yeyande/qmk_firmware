@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0100
 #define MANUFACTURER    Keebio
 #define PRODUCT         Split Tester
+#define DESCRIPTION     Split keyboard testing unit
 
 /* key matrix size */
 // Rows are doubled-up

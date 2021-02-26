@@ -21,8 +21,8 @@ thumb keys to make it work without them.
  // |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  // | LShift |   Z  |   X  |   C  |   V  |   B  | Lead | RAISE|  | LOWER|DBLTAP|   N  |   M  | ,  < | . >  | /  ? | RShift |
  // `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- //                        | MPlay| GUI  | LCtrl| Space| LALT |  | Enter|BSpace| NAV  | LCTL+|Worksp|
- //                        |      |      |      |      |      |  |      |      |      | LALT |toggle|
+ //                        | MPlay| GUI  | LCtrl| Space| LALT |  | Enter|BSpace| NAV  | LAlt |Worksp|
+ //                        |      |      |      |      |      |  |      |      |      |      |toggle|
  //                        `----------------------------------'  `----------------------------------'
 ```
 
@@ -103,18 +103,15 @@ programming, and it is editor agnostic.
  // |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  // |        |      |      |      |      | F11  |                              | F12  |      |      |      |      |        |
  // |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- // |        |      |      |      |      |      |ScLock|      |  |      | Ins  |      |      |      |      |      |CapsLock|
+ // |        |      |      |      |      |      |ScLock|      |  |      | Ins  |      |      |      |      |      |        |
  // `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- //                        |      |      |      |      |      |  |      |      |      | RAlt |      |
+ //                        |      |      |      |      |      |  | Esc  | Del  |      | RAlt |      |
  //                        |      |      |      |      |      |  |      |      |      |      |      |
  //                        `----------------------------------'  `----------------------------------'
 ```
 
 Access to the functional keys, which I mostly use to run `emacs`
 compilation mode.
-
-This layer also includes key that changes the state, like insert and
-caps lock.
 
 Scroll Lock is used to toggle between English and Swedish.
 
@@ -133,7 +130,7 @@ Right rotary encoder
  // ,-------------------------------------------.                              ,-------------------------------------------.
  // |        |   1  |  2   |  3   |  4   |  5   |                              |  6   |  7   |  8   |  9   |  0   |        |
  // |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- // |        |      | ESC  |  DEL |      |      |                              |      | Left | Up   | Down | Right|        |
+ // |        |      |      |      |      |      |                              |      | Left | Up   | Down | Right|        |
  // |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  // |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      |        |
  // `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
@@ -146,9 +143,6 @@ Access to the number as well as the arrow keys. Got use to the number
 row after using [ErgoDox](https://www.ergodox.io/) keyboards for a few
 years. Do not feel I need a numpad layer, which seems to be quite
 common with small keyboards like this.
-
-Esc and Delete is also on this layer as they are easy to reach and they
-only need to be chord with the modifiers.
 
 # Adjust Layer: RGB
 ```

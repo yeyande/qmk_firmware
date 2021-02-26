@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    QUADH
 #define PRODUCT         LB75
+#define DESCRIPTION     Custom 75% keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 12

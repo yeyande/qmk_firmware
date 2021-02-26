@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    I/O Keyboards
 #define PRODUCT         Aves65
+#define DESCRIPTION     A 65% keyboard with underglow.
 
 /* key matrix size */
 #define MATRIX_ROWS 5

@@ -3,14 +3,13 @@
  */
 
 #include <stdint.h>
-#include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-#include <hal.h>
+#include "hal.h"
 #include "quantum.h"
 #include "timer.h"
 #include "wait.h"
-#include "print.h"
+#include "printf.h"
 #include "matrix.h"
 
 /**

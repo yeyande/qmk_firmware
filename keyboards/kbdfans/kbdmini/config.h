@@ -9,6 +9,7 @@
 #define MANUFACTURER    DZTECH
 
 #define PRODUCT         KBDMINI
+#define DESCRIPTION     KBDMINI RGB keyboard
 #define MATRIX_ROWS 4
 #define MATRIX_COLS 13
 
