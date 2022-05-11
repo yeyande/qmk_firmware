@@ -1,18 +1,18 @@
 #include "redox_w.h"
 
 void led_init(void) {
-	DDRD  |= (1<<1);
-	PORTD |= (1<<1);
-	DDRF  |= (1<<4) | (1<<5);
-	PORTF |= (1<<4) | (1<<5);
+     DDRD  |= (1<<1);
+     PORTD |= (1<<1);
+     DDRF  |= (1<<4) | (1<<5);
+     PORTF |= (1<<4) | (1<<5);
 }
 
 
 void matrix_init_kb(void) {
-	// put your keyboard start-up code here
-	// runs once when the firmware starts up
-	matrix_init_user();
-	led_init();
+     // put your keyboard start-up code here
+     // runs once when the firmware starts up
+     matrix_init_user();
+     led_init();
 }
 
 #ifdef ONEHAND_ENABLE

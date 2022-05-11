@@ -40,8 +40,8 @@ void cake_count (qk_tap_dance_state_t *state, void *user_data) {
      layer_off (MDIA);
   } 
   else {    
-   	layer_off (RIMW);       //define single tap or hold here
-	layer_off (MDIA);
+        layer_off (RIMW);       //define single tap or hold here
+     layer_off (MDIA);
     reset_tap_dance (state);
   }
 }
@@ -50,7 +50,7 @@ void dance_cad_mdia_fin (qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
     register_code (KC_LCTL);
     register_code (KC_LALT);
-	register_code (KC_DEL);
+     register_code (KC_DEL);
   } else {
     layer_on (MDIA);
   }
@@ -60,7 +60,7 @@ void dance_cad_mdia_reset (qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
     unregister_code (KC_DEL);
     unregister_code (KC_LALT);
-	unregister_code (KC_LCTL);
+     unregister_code (KC_LCTL);
   } else {
     ;
   }
@@ -163,8 +163,8 @@ LT(SYMB, KC_F12),         KC_Q,         KC_W,         KC_E,        KC_R,   KC_T,
        KC_TRNS, KC_TRNS,
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS
-),	
-	
+),     
+     
 /* Keymap 2: RimWorld Layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
@@ -315,7 +315,7 @@ void matrix_scan_user(void) {
             break;
         case 3:
             ergodox_right_led_3_on();
-            break;			
+            break;               
         default:
             // none
             break;

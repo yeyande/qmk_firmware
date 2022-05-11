@@ -83,36 +83,36 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     report_mouse_t currentReport;
-	switch (keycode) {
-		//mouse buttons, for 1-3, to update the mouse report:
-		//MOUSE_BTN1-3 are consts defined in report.h
-		case MS_BTN1:
-			currentReport = pointing_device_get_report();
-			SetBitMask(currentReport.buttons, MOUSE_BTN1, record->event.pressed);
-			pointing_device_set_report(currentReport);
-			return false;
-		case MS_BTN2:
-			currentReport = pointing_device_get_report();
-			SetBitMask(currentReport.buttons, MOUSE_BTN2, record->event.pressed);
-			pointing_device_set_report(currentReport);
-			return false;
-		case MS_BTN3:
-			currentReport = pointing_device_get_report();
-			SetBitMask(currentReport.buttons, MOUSE_BTN3, record->event.pressed);
-			pointing_device_set_report(currentReport);
-			return false;
+     switch (keycode) {
+          //mouse buttons, for 1-3, to update the mouse report:
+          //MOUSE_BTN1-3 are consts defined in report.h
+          case MS_BTN1:
+               currentReport = pointing_device_get_report();
+               SetBitMask(currentReport.buttons, MOUSE_BTN1, record->event.pressed);
+               pointing_device_set_report(currentReport);
+               return false;
+          case MS_BTN2:
+               currentReport = pointing_device_get_report();
+               SetBitMask(currentReport.buttons, MOUSE_BTN2, record->event.pressed);
+               pointing_device_set_report(currentReport);
+               return false;
+          case MS_BTN3:
+               currentReport = pointing_device_get_report();
+               SetBitMask(currentReport.buttons, MOUSE_BTN3, record->event.pressed);
+               pointing_device_set_report(currentReport);
+               return false;
         case KC_WH_U:
-			currentReport = pointing_device_get_report();
+               currentReport = pointing_device_get_report();
             if(record->event.pressed) {
                 currentReport.v += 1;
             }
             else {
                 currentReport.v = 0;
             }
-			pointing_device_set_report(currentReport);
-			return false;
+               pointing_device_set_report(currentReport);
+               return false;
         case KC_WH_D:
-			currentReport = pointing_device_get_report();
+               currentReport = pointing_device_get_report();
             if(record->event.pressed) {
                 currentReport.v -= 1;
             }
@@ -120,7 +120,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 currentReport.v = 0;
             }
             pointing_device_set_report(currentReport);
-			return false;
-	}
-	return true;
+               return false;
+     }
+     return true;
 }

@@ -147,7 +147,7 @@ static void led_update_rgb(void) {
             break;
     }
     if (!suspend_active) {
-	ws2812_setleds(led, RGBLED_NUM);
+     ws2812_setleds(led, RGBLED_NUM);
     }
 }
 
@@ -173,7 +173,7 @@ void update_layer_leds(void) {
     }
 
     if (layer == old_layer && default_layer == old_default_layer) {
-	return;
+     return;
     }
     old_layer         = layer;
     old_default_layer = default_layer;

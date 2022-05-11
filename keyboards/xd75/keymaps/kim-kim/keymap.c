@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | LALT   | RAISE  | RAISE  | LGUI   | SPACE  | SPACE  | NUM+   | NUM0   | NUM.   | SPACE  | SPACE  | RGUI   | LOWER  | LOWER  | RALT   |
  * '--------------------------------------------------------------------------------------------------------------------------------------'
  */
-	
+     
  [_QW] = LAYOUT_ortho_5x15( /* SPLIT QWERTY */
   KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_PSLS, KC_PAST, KC_PMNS, KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_GRV,
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_P7,   KC_P8,   KC_P9,   KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,

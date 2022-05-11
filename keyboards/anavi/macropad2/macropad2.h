@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * represents the switch matrix.
  */
 #define LAYOUT( \
-	K01, K02 \
+     K01, K02 \
 ) \
 { \
   { K01, K02 }, \

@@ -42,8 +42,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	switch (keycode) {
-		case UNO:
+     switch (keycode) {
+          case UNO:
             if (record->event.pressed) {
                 pressTimer = timer_read();
             } else {

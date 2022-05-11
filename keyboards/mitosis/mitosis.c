@@ -1,17 +1,17 @@
 #include "mitosis.h"
 
 void led_init(void) {
-	DDRD  |= (1<<1); // Pin to green, set as output
-	PORTD |= (1<<1); // Turn it off
-	DDRF  |= (1<<4) | (1<<5); // Pins to red and blue, set as output
-	PORTF |= (1<<4) | (1<<5); // Turn them off
+     DDRD  |= (1<<1); // Pin to green, set as output
+     PORTD |= (1<<1); // Turn it off
+     DDRF  |= (1<<4) | (1<<5); // Pins to red and blue, set as output
+     PORTF |= (1<<4) | (1<<5); // Turn them off
 }
 
 void matrix_init_kb(void) {
-	// put your keyboard start-up code here
-	// runs once when the firmware starts up
-	matrix_init_user();
-	led_init();
+     // put your keyboard start-up code here
+     // runs once when the firmware starts up
+     matrix_init_user();
+     led_init();
 }
 
 #ifdef SWAP_HANDS_ENABLE

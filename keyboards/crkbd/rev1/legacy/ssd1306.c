@@ -160,9 +160,9 @@ bool iota_gfx_init(bool rotate) {
 
   SEND_CMDS(
 #ifdef SSD1306_128X64
-	cmd2(SetComPins, 0x12),
+     cmd2(SetComPins, 0x12),
 #else
-	cmd2(SetComPins, 0x2),
+     cmd2(SetComPins, 0x2),
 #endif
     cmd2(SetContrast, 0x8f),
     cmd2(SetPreCharge, 0xf1),

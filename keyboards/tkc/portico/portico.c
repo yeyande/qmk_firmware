@@ -126,14 +126,14 @@ void suspend_wakeup_init_kb(void) {
 }
 
 void rgb_matrix_indicators_kb(void) {
-	if (host_keyboard_led_state().caps_lock) {
-		rgb_matrix_set_color(30, 0xFF, 0xFF, 0xFF);
-	}
-	else { 
-		rgb_matrix_set_color(30, 0x00, 0x00, 0x00);
-	}
-	if (!rgb_matrix_is_enabled()) {
-		rgb_matrix_driver.flush();
+     if (host_keyboard_led_state().caps_lock) {
+          rgb_matrix_set_color(30, 0xFF, 0xFF, 0xFF);
+     }
+     else { 
+          rgb_matrix_set_color(30, 0x00, 0x00, 0x00);
+     }
+     if (!rgb_matrix_is_enabled()) {
+          rgb_matrix_driver.flush();
     }
 }
 #endif

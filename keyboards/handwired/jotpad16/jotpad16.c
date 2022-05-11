@@ -2,7 +2,7 @@
 
 void matrix_init_kb(void) {
 
-	matrix_init_user();
+     matrix_init_user();
 }
 
 void keyboard_pre_init_kb() {

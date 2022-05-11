@@ -24,30 +24,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_P4,  KC_P5,   KC_P6,   KC_PPLS,
          KC_MPLY, KC_P1,  KC_P2,   KC_P3,   KC_PENT,
          KC_MUTE, MO(1),  KC_P0,   KC_PDOT, KC_PENT
-				 ),
-		
-	[1] = LAYOUT_ortho(
+                     ),
+          
+     [1] = LAYOUT_ortho(
                   KC_ESC,  KC_TRNS, KC_TRNS,  KC_TRNS,
                   KC_HOME, KC_TRNS, KC_PGUP,  KC_TRNS,
                   KC_END , KC_UP,   KC_PGDN,  KC_TRNS,
          KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_SPC,
          KC_TRNS, KC_TRNS, KC_BSPC, KC_DEL,   KC_TRNS
-				 ),
-	
-	[2] = LAYOUT_ortho(
+                     ),
+     
+     [2] = LAYOUT_ortho(
                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
-				 ),
-				 
-	[3] = LAYOUT_ortho(
+                     ),
+                     
+     [3] = LAYOUT_ortho(
                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
-				 )
+                     )
 
 };

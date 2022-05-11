@@ -21,8 +21,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  KC_L,     KC_S,     KC_N,     KC_T,     KC_D,     KC_END,       KC_F5,    KC_F6,    KC_F7,    KC_F8,         KC_DEL,   KC_P,     KC_I,     KC_A,     KC_E,    KC_K, 
                  KC_Z,     KC_M,     KC_C,     KC_V,     KC_B,      KC_LCTL,     KC_F9,    KC_F10,   KC_F11,   KC_F12,       KC_RCTL,   KC_W,     KC_G,     KC_COMM,  KC_DOT,  KC_ENT, 
                  KC_LALT,  KC_MINS,  KC_EQL,   KC_TAB,    KC_SPC,   KC_LGUI,     KC_HOME,  KC_UP,    KC_END,   KC_PGUP,      KC_RGUI,  KC_SPC,    KC_QUOT,  KC_SCLN,  KC_SLSH, KC_RALT,
-	                       KC_LSFT,  KC_GRV,                                     KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_PGDN,                                     KC_BSLS,  KC_RSFT
-				 ),
+                            KC_LSFT,  KC_GRV,                                     KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_PGDN,                                     KC_BSLS,  KC_RSFT
+                     ),
     [1] = LAYOUT(/* 1st Layer - Numpad Keys */
                  _______,  _______,  _______,  _______,  _______,  _______,      _______,  KC_SLCK,  KC_PAUS,  _______,       _______,  _______,  _______,  _______,  _______,  _______,
                  _______,  _______,  _______,  _______,  _______,  _______,      _______,  KC_PSLS,  KC_PAST,  KC_PMNS,       _______,  _______,  _______,  _______,  _______,  _______,

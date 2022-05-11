@@ -17,12 +17,12 @@
 #include "vega.h"
 
 void matrix_init_kb(void) {
-	// Initialize indicator LEDs to output
+     // Initialize indicator LEDs to output
     
     setPinOutput(B7); // Caps
-	setPinOutput(A5); // Slck
+     setPinOutput(A5); // Slck
 
-	matrix_init_user();
+     matrix_init_user();
 }
 
 bool led_update_kb(led_t led_state) {

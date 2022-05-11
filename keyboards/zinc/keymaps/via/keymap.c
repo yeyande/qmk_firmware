@@ -21,7 +21,7 @@
 
 // Light LEDs 6 to 9 and 12 to 15 red when caps lock is active. Hard to ignore!
 const rgblight_segment_t PROGMEM capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-	{12, 1, HSV_RED}       // Light 4 LEDs, starting with LED 6
+     {12, 1, HSV_RED}       // Light 4 LEDs, starting with LED 6
 );
 // Light LEDs 9 & 10 in cyan when keyboard layer 1 is active
 const rgblight_segment_t PROGMEM lower_layer[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -35,13 +35,13 @@ const rgblight_segment_t PROGMEM raise_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     capslock_layer,
-	lower_layer,
-	raise_layer
+     lower_layer,
+     raise_layer
 );
 
 void keyboard_post_init_user(void) {
-	// Enable the LED layers
-	rgblight_layers = rgb_layers;
+     // Enable the LED layers
+     rgblight_layers = rgb_layers;
 }
 #endif
 

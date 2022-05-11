@@ -179,70 +179,70 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
     case RGB_TOG:
       if(record->event.pressed) {
-	rgblight_toggle_noeeprom();
+     rgblight_toggle_noeeprom();
       }
       break;
     case RGB_MOD:
       if(record->event.pressed) {
         rgblight_step_noeeprom();
-	rgb_mode = rgblight_get_mode();
+     rgb_mode = rgblight_get_mode();
       }
       break;
     case RGB_RMOD:
       if(record->event.pressed) {
         rgblight_step_reverse_noeeprom();
-	rgb_mode = rgblight_get_mode();
+     rgb_mode = rgblight_get_mode();
       }
       break;
 
     case SLIGHTLY:
       if(record->event.pressed) {
-	SEND_STRING(":slightly_smiling_face:");
+     SEND_STRING(":slightly_smiling_face:");
       }
       break;
     case SMILE:
       if(record->event.pressed) {
-	SEND_STRING(":smile:");
+     SEND_STRING(":smile:");
       }
       break;
     case JOY:
       if(record->event.pressed) {
-	SEND_STRING(":joy:");
+     SEND_STRING(":joy:");
       }
       break;
     case RELAXED:
       if(record->event.pressed) {
-	SEND_STRING(":relaxed:");
+     SEND_STRING(":relaxed:");
       }
       break;
     case HEART:
       if(record->event.pressed) {
-	SEND_STRING(":heart:");
+     SEND_STRING(":heart:");
       }
       break;
     case SAD:
       if(record->event.pressed) {
-	SEND_STRING(":white_frowning_face:");
+     SEND_STRING(":white_frowning_face:");
       }
       break;
     case CRY:
       if(record->event.pressed) {
-	SEND_STRING(":cry:");
+     SEND_STRING(":cry:");
       }
       break;
     case NETRURAL:
       if(record->event.pressed) {
-	SEND_STRING(":neutral_face:");
+     SEND_STRING(":neutral_face:");
       }
       break;
     case SCREAM:
       if(record->event.pressed) {
-	SEND_STRING(":scream:");
+     SEND_STRING(":scream:");
       }
       break;
     case THUMBSUP:
       if(record->event.pressed) {
-	SEND_STRING(":+1:");
+     SEND_STRING(":+1:");
       }
       break;
     default:

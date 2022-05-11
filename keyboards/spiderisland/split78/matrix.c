@@ -113,23 +113,23 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
         matrix_row_t last_row_value = current_matrix[row];
 
         matrix_row_t cols = 0;
-	    // Select the row to scan
+         // Select the row to scan
         matrix_set_row_status(row);
 
         matrix_io_delay();
-	    //Set the local row
+         //Set the local row
 
 #if defined(RIGHT_HALF)
-		// Initialize to 0x7F in case I2C read fails,
-		// as 0x75 would be no keys pressed
-		uint8_t data = 0x7F;
-		// Receive the columns from right half
-		i2c_receive(TWI_ADDR_WRITE, &data, 1, I2C_TIMEOUT);
+          // Initialize to 0x7F in case I2C read fails,
+          // as 0x75 would be no keys pressed
+          uint8_t data = 0x7F;
+          // Receive the columns from right half
+          i2c_receive(TWI_ADDR_WRITE, &data, 1, I2C_TIMEOUT);
 #endif
 
         cols |= ((~(PINA | 0x80)) & 0x7F);
 #if defined(RIGHT_HALF)
-		cols |= (((~(data | 0x80)) & 0x7F) << 7);
+          cols |= (((~(data | 0x80)) & 0x7F) << 7);
 #endif
 
         current_matrix[row] = cols;

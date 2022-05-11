@@ -75,7 +75,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* This configures the I2C clock to 400khz assuming a 48Mhz clock */
 #define I2C1_TIMINGR_SCLDEL 3U
 #define I2C1_TIMINGR_SDADEL 1U
-#define I2C1_TIMINGR_SCLH 	3U
+#define I2C1_TIMINGR_SCLH      3U
 #define I2C1_TIMINGR_SCLL   9U
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */

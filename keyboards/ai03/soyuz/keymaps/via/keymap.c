@@ -27,7 +27,7 @@ enum layer_names {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	// Default Layer
+     // Default Layer
     [_BASE] = LAYOUT_ortho_5x4(
         KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
         KC_P7,   KC_P8,   KC_P9,   KC_PPLS,
@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_P1,   KC_P2,   KC_P3,   KC_PENT,
         KC_P0,   KC_P0,   KC_PDOT, KC_PENT
     ),
-	// Fn Layer 1
+     // Fn Layer 1
     [_FN] = LAYOUT_ortho_5x4(
         _______, _______, _______, _______,
         _______, _______, _______, _______,
@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______,
         _______, _______, _______, _______
     ),
-	// Fn Layer 2
+     // Fn Layer 2
     [_FN2] = LAYOUT_ortho_5x4(
         _______, _______, _______, _______,
         _______, _______, _______, _______,
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______,
         _______, _______, _______, _______
     ),
-	// Fn Layer 3
+     // Fn Layer 3
     [_FN3] = LAYOUT_ortho_5x4(
         _______, _______, _______, _______,
         _______, _______, _______, _______,

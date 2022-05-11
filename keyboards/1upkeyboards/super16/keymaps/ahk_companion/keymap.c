@@ -12,7 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 KC_F17, KC_F18, KC_F19, KC_F20,
                 KC_F21, KC_F22, KC_F23, KC_F24,
                 OSL(1), OSL(2), OSL(3), TG(4)    //Transparent to let you go between layers
-		),
+          ),
 
         [1] = LAYOUT_ortho_4x4(
                 LALT(KC_F13), LALT(KC_F14), LALT(KC_F15), LALT(KC_F16),
@@ -55,31 +55,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const rgblight_segment_t PROGMEM my_layer0_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0,16,HSV_ORANGE}
-	);
+          {0,16,HSV_ORANGE}
+     );
 const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0,16,HSV_GREEN}
-	);
+          {0,16,HSV_GREEN}
+     );
 const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0,16,HSV_RED}
-	);
+          {0,16,HSV_RED}
+     );
 const rgblight_segment_t PROGMEM my_layer3_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0,16,HSV_BLUE}
-	);
+          {0,16,HSV_BLUE}
+     );
 const rgblight_segment_t PROGMEM my_layer4_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0,16,HSV_WHITE}
-	);
+          {0,16,HSV_WHITE}
+     );
 const rgblight_segment_t PROGMEM my_layer5_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0,16,HSV_TEAL}
-	);
+          {0,16,HSV_TEAL}
+     );
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
         my_layer0_layer,
-		my_layer1_layer,
-		my_layer2_layer,
-		my_layer3_layer,
-		my_layer4_layer,
+          my_layer1_layer,
+          my_layer2_layer,
+          my_layer3_layer,
+          my_layer4_layer,
         my_layer5_layer
-	);
+     );
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
@@ -111,9 +111,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 void keyboard_post_init_user(void) {
-	//Enable the LED layers
-	rgblight_layers = my_rgb_layers;
-	layer_state_set_user(layer_state);
+     //Enable the LED layers
+     rgblight_layers = my_rgb_layers;
+     layer_state_set_user(layer_state);
 }
 
 void matrix_scan_user(void) {

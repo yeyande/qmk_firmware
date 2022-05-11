@@ -56,7 +56,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (get_mods() & MOD_BIT(KC_LSHIFT) || get_mods() & MOD_BIT(KC_RSHIFT)){
           unregister_code16(KC_LSFT);
           register_code16(IT_LESS);
-	  register_code16(KC_LSFT);
+       register_code16(KC_LSFT);
         } else {
           register_code16(IT_COMM);
         }

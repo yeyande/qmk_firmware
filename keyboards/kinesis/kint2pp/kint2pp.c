@@ -1,10 +1,10 @@
 #include "kint2pp.h"
 
 void matrix_init_kb(void) {
-	led_init_ports();
+     led_init_ports();
 
 
-	matrix_init_user();
+     matrix_init_user();
 }
 void led_init_ports() {
   // * Set our LED pins as output

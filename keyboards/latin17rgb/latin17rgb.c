@@ -24,7 +24,7 @@ const is31_led g_is31_leds[DRIVER_LED_TOTAL] = {
  *   |  |       G location
  *   |  |       |       B location
  *   |  |       |       | */
-	{0, C1_3,  C2_3,  C3_3},// BL1
+     {0, C1_3,  C2_3,  C3_3},// BL1
     {0, C1_4,  C2_4,  C3_4},// BL2
     {0, C1_5,  C2_5,  C3_5},// BL3
     {0, C1_11, C2_11, C3_11},// BL4
@@ -41,7 +41,7 @@ const is31_led g_is31_leds[DRIVER_LED_TOTAL] = {
     {0, C9_3, C8_3, C7_3},//BL15
     {0, C9_5, C8_5, C7_5},// BL16
     {0, C9_6, C8_6, C7_6},// BL17
-	
+     
 };
 
 led_config_t g_led_config = {

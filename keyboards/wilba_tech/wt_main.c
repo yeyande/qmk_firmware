@@ -41,7 +41,7 @@ void via_init_kb(void)
 #if RGB_BACKLIGHT_ENABLED || MONO_BACKLIGHT_ENABLED
         backlight_config_load();
 #endif // RGB_BACKLIGHT_ENABLED || MONO_BACKLIGHT_ENABLED
-    } else	{
+    } else     {
 #if RGB_BACKLIGHT_ENABLED || MONO_BACKLIGHT_ENABLED
         // If the EEPROM has not been saved before, or is out of date,
         // save the default values to the EEPROM. Default values

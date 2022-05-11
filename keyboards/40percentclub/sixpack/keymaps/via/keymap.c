@@ -26,16 +26,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
 
     [0] = LAYOUT_ortho_2x3(KC_MUTE, KC_UP  , KC_MPLY,
-		 KC_LEFT, KC_DOWN, KC_RGHT),
+           KC_LEFT, KC_DOWN, KC_RGHT),
     [1] = LAYOUT_ortho_2x3(KC_TRNS, KC_TRNS, KC_TRNS,
-		 KC_TRNS, KC_TRNS, KC_TRNS),
+           KC_TRNS, KC_TRNS, KC_TRNS),
     [2] = LAYOUT_ortho_2x3(KC_TRNS, KC_TRNS, KC_TRNS,
-		 KC_TRNS, KC_TRNS, KC_TRNS),
+           KC_TRNS, KC_TRNS, KC_TRNS),
     [3] = LAYOUT_ortho_2x3(KC_TRNS, KC_TRNS, KC_TRNS,
-		 KC_TRNS, KC_TRNS, KC_TRNS),
+           KC_TRNS, KC_TRNS, KC_TRNS),
     [4] = LAYOUT_ortho_2x3(KC_TRNS, KC_TRNS, KC_TRNS,
-		 KC_TRNS, KC_TRNS, KC_TRNS),
+           KC_TRNS, KC_TRNS, KC_TRNS),
     [5] = LAYOUT_ortho_2x3(KC_TRNS, KC_TRNS, KC_TRNS,
-		 KC_TRNS, KC_TRNS, KC_TRNS),
+           KC_TRNS, KC_TRNS, KC_TRNS),
 
 };

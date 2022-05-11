@@ -204,27 +204,27 @@ void encoder_update(bool clockwise) {
     }
   } else {
       switch (get_highest_layer(layer_state)) {
-        case _LOWER:	// Seek Track
+        case _LOWER:     // Seek Track
             if (clockwise) {
                tap_code16(KC_MPRV);
                  } else {
-			   tap_code16(KC_MNXT);
+                  tap_code16(KC_MNXT);
             break;
-        case _RAISE:	// Page Scroll
+        case _RAISE:     // Page Scroll
             if (clockwise) {
                tap_code16(KC_BRID);
                  } else {
-			   tap_code16(KC_BRIU);
+                  tap_code16(KC_BRIU);
             break;
-        default:		// Volume
-			if (clockwise) {
+        default:          // Volume
+               if (clockwise) {
                tap_code16(KC_VOLD);
                  } else {
                tap_code16(KC_VOLU);
-		   		 }
-        	}
-		}
-	}
+                        }
+             }
+          }
+     }
   }
 }
 

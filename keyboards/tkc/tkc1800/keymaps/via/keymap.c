@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef OLED_DRIVER_ENABLE
 void oled_task_user(void) {
     oled_write_P(PSTR("TKC1800\n"),false);
-	// Host Keyboard Layer Status
+     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
 
     switch (get_highest_layer(layer_state)) {
@@ -110,10 +110,10 @@ void oled_task_user(void) {
         case FUNCTION:
             oled_write_P(PSTR("Function\n"), false);
             break;
-		case ALTERNATE:
+          case ALTERNATE:
             oled_write_P(PSTR("Alternate\n"), false);
             break;
-		case LAST:
+          case LAST:
             oled_write_P(PSTR("Last\n"), false);
             break;
         default:

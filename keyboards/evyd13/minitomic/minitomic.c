@@ -31,7 +31,7 @@ void matrix_scan_kb(void) {
 }
 
 void led_init_ports(void) {
-	//Set led pin as output, then high (off)
+     //Set led pin as output, then high (off)
     writePinHigh(C7);
 }
 

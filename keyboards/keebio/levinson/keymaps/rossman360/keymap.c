@@ -47,51 +47,51 @@ enum custom_keycodes {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 switch (keycode) {
-	case CSPEAK:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN));
-	}
-	break;
-	case SPEAK1:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN) SS_LCTRL(SS_TAP(X_1)));
-	}
-	break;
-	case SPEAK2:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN) SS_LCTRL(SS_TAP(X_2)));
-	 }
-	break;
-	case SPEAK3:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN) SS_LCTRL(SS_TAP(X_3)));
-	}
-	break;
-	case SPEAK4:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN) SS_LCTRL(SS_TAP(X_4)));
-	}
-	break;
-	case PARADOWN:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN));
-	}
-	break;
-	case PMERGE:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_HOME) SS_TAP(X_BSPACE) SS_TAP(X_SPACE) SS_LCTRL(SS_TAP(X_BSPACE)) SS_TAP(X_SPACE));
-	}
-	break;
-	case WREFRESH:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_BSPACE));
-	}
-	break;
-	case REMCAPS:
-	if (record->event.pressed) {
-		SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_LCTRL(SS_TAP(X_LEFT)) SS_TAP(X_DELETE));
-	}
-	break;
+     case CSPEAK:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN));
+     }
+     break;
+     case SPEAK1:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN) SS_LCTRL(SS_TAP(X_1)));
+     }
+     break;
+     case SPEAK2:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN) SS_LCTRL(SS_TAP(X_2)));
+      }
+     break;
+     case SPEAK3:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN) SS_LCTRL(SS_TAP(X_3)));
+     }
+     break;
+     case SPEAK4:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN) SS_LCTRL(SS_TAP(X_4)));
+     }
+     break;
+     case PARADOWN:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_PGDOWN) SS_TAP(X_ENTER) SS_TAP(X_PGDOWN));
+     }
+     break;
+     case PMERGE:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_HOME) SS_TAP(X_BSPACE) SS_TAP(X_SPACE) SS_LCTRL(SS_TAP(X_BSPACE)) SS_TAP(X_SPACE));
+     }
+     break;
+     case WREFRESH:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_BSPACE));
+     }
+     break;
+     case REMCAPS:
+     if (record->event.pressed) {
+          SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_LCTRL(SS_TAP(X_LEFT)) SS_TAP(X_DELETE));
+     }
+     break;
 };
 return true;
 };

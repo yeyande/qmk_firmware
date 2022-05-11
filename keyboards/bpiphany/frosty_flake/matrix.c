@@ -72,7 +72,7 @@ void matrix_init_custom(void) {
 // matrix is 18 uint8_t.
 // we select the row (one of 18), then read the column
 bool matrix_scan_custom(matrix_row_t current_matrix[]) {
-	bool has_changed = false;
+     bool has_changed = false;
     for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
         matrix_row_t orig = current_matrix[row];
         select_row(row);

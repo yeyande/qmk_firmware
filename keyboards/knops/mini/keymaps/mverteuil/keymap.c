@@ -93,12 +93,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *  Layer 1 (Copy and Paste Macros)
      *   _____   _____   _____
      *  |     | |     | |     |
-     *	| ESC | |Ctl+Z| |CSf+Z|
-     *	|_____| |_____| |_____|
+     *     | ESC | |Ctl+Z| |CSf+Z|
+     *     |_____| |_____| |_____|
      *   _____   _____   _____
      *  |     | |     | |     |
-     *	|Ctl+X| |Ctl+C| |Ctl+V|
-     *	|_____| |_____| |_____|
+     *     |Ctl+X| |Ctl+C| |Ctl+V|
+     *     |_____| |_____| |_____|
      *
      */
 
@@ -113,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *  | Win | | Win | | Win |
      *  | Next| | Top | |Mximze
      *  |_1/3_| |_1/2_| |_____|
-     *   _____	 _____	 _____
+     *   _____      _____      _____
      *  | Win | | Win | | Win |
      *  | Prev| | Bot | | Next|
      *  |_1/3_| |_1/2_| |Displ|
@@ -147,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* clang-format on */
 
 /*
- *	Knops Mini LED Numbers:
+ *     Knops Mini LED Numbers:
  *   _____   _____   _____
  *  |     | |     | |     |
  *  |  1  | |  2  | |  3  |    <---
@@ -157,7 +157,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *  |  4  | |  5  | |  6  |    <---
  *  |_____| |_____| |_____|
  *
- *	 < 0 >   < 1 >   < 2 >     <---      These front-LEDs are called 'Layer LEDs'
+ *      < 0 >   < 1 >   < 2 >     <---      These front-LEDs are called 'Layer LEDs'
  *                                       To turn on/off these leds, use:
  *                                           set_layer_led( [0-2], [true/false] );
  */

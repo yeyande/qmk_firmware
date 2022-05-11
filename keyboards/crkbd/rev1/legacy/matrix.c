@@ -39,7 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #ifndef DEBOUNCE
-#  define DEBOUNCE	5
+#  define DEBOUNCE     5
 #endif
 
 #define ERROR_DISCONNECT_COUNT 5
@@ -268,10 +268,10 @@ uint8_t matrix_master_scan(void) {
 #else // USE_SERIAL
   #ifdef SERIAL_USE_MULTI_TRANSACTION
     mchanged = memcmp((void *)serial_master_buffer,
-		      &matrix[offset], SERIAL_MASTER_BUFFER_LENGTH);
+                &matrix[offset], SERIAL_MASTER_BUFFER_LENGTH);
   #endif
     memcpy((void *)serial_master_buffer,
-	   &matrix[offset], SERIAL_MASTER_BUFFER_LENGTH);
+        &matrix[offset], SERIAL_MASTER_BUFFER_LENGTH);
 #endif
 
 #ifdef USE_MATRIX_I2C

@@ -63,8 +63,8 @@ void board_init(void) {
 
 void backlight_get_value( uint8_t *data )
 {
-	uint8_t *value_id = &(data[0]);
-	uint8_t *value_data = &(data[1]);
+     uint8_t *value_id = &(data[0]);
+     uint8_t *value_data = &(data[1]);
   switch (*value_id)
   {
     case id_qmk_backlight_brightness:
@@ -83,8 +83,8 @@ void backlight_get_value( uint8_t *data )
 
 void backlight_set_value( uint8_t *data )
 {
-	uint8_t *value_id = &(data[0]);
-	uint8_t *value_data = &(data[1]);
+     uint8_t *value_id = &(data[0]);
+     uint8_t *value_data = &(data[1]);
   switch (*value_id)
   {
     case id_qmk_backlight_brightness:
@@ -357,7 +357,7 @@ void via_init_kb(void)
   // OK to load from EEPROM.
   if (via_eeprom_is_valid()) {
     custom_config_load();
-  } else	{
+  } else     {
 #ifdef DYNAMIC_KEYMAP_ENABLE
     // Reset the custom stuff
     custom_config_reset();

@@ -97,7 +97,7 @@
 //    #define GDISP_NEED_UTF8                          GFXOFF
 #define GDISP_NEED_TEXT_KERNING GFXON
 //    #define GDISP_INCLUDE_FONT_UI1                   GFXOFF
-//    #define GDISP_INCLUDE_FONT_UI2                   GFXOFF		// The smallest preferred font.
+//    #define GDISP_INCLUDE_FONT_UI2                   GFXOFF          // The smallest preferred font.
 //    #define GDISP_INCLUDE_FONT_LARGENUMBERS          GFXOFF
 //    #define GDISP_INCLUDE_FONT_DEJAVUSANS10          GFXOFF
 //    #define GDISP_INCLUDE_FONT_DEJAVUSANS12          GFXOFF

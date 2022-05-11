@@ -18,9 +18,9 @@
 
 
 __attribute__ ((weak)) void encoder_update_user(uint8_t index, bool clockwise) {
-	if (!clockwise) {
-		tap_code(KC_AUDIO_VOL_DOWN);
-	} else {
-		tap_code(KC_AUDIO_VOL_UP);
-	}
+     if (!clockwise) {
+          tap_code(KC_AUDIO_VOL_DOWN);
+     } else {
+          tap_code(KC_AUDIO_VOL_UP);
+     }
 }

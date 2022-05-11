@@ -46,7 +46,7 @@ bool babblePaste_mac(uint16_t keycode) {
     BABLM(BABL_SELECT_ALL, SS_LGUI("a"));
     BABLM(BABL_FIND, SS_LGUI("f"));
     BABLM(BABL_FIND_NEXT, SS_LGUI("g"));
-    // BABLM( BABL_FIND_NEXT, 	OMSFT(X_F4)) ); // Mac office
+    // BABLM( BABL_FIND_NEXT,      OMSFT(X_F4)) ); // Mac office
     BABLM(BABL_FIND_PREV, OMSFT(IMGUI(X_G)));  // Sublime, browser
     BABLM(BABL_FIND_PREV, SS_LGUI("g"));
     BABLM(BABL_FIND_REPLACE, SS_LGUI("f"));
@@ -89,7 +89,7 @@ bool babblePaste_mac(uint16_t keycode) {
 #            endif
 #            ifdef BABL_BROWSER_SAFARI
     BABLM(BABL_BROWSER_VIEWSRC, OMGUI(IMALT(X_U)));  // Safari
-                                                     // BABLM( BABL_BROWSER_DEV_TOOLS,	// No real equivalent for Safari
+                                                     // BABLM( BABL_BROWSER_DEV_TOOLS,     // No real equivalent for Safari
 #            endif
 #        endif  //  BABL_BROWSER
 
@@ -105,7 +105,7 @@ bool babblePaste_mac(uint16_t keycode) {
 #            ifdef BABL_APP_CELLS
 #                ifdef BABL_APP_MSOFFICE
     BABLM(BABL_APP_CENTER_ALIGN, IMGUI(X_E));
-    // BABLM( BABL_APP_CLEAR_FORMATTING, 	OMCTL(IMGUI(X_G)) ); // this isn't native. https://support.office.com/en-us/article/Clear-all-text-formatting-C094C4DA-7F09-4CEA-9A8D-C166949C9C80#OfficeVersion=macOS
+    // BABLM( BABL_APP_CLEAR_FORMATTING,      OMCTL(IMGUI(X_G)) ); // this isn't native. https://support.office.com/en-us/article/Clear-all-text-formatting-C094C4DA-7F09-4CEA-9A8D-C166949C9C80#OfficeVersion=macOS
     BABLM(BABL_APP_SCROLL_ACTIVE_CELL, IMCTL(X_BSPACE));
     BABLM(BABL_NEWLINE_IN_CELL, IMALT(X_ENTER));
     BABLM(BABL_INSERT_COMMENT, IMSFT(X_F2));

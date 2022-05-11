@@ -168,10 +168,10 @@ enum custom_keycodes {
                               T(D),\
                               T(R),\
                               T(E),\
-							  T(G),\
+                                     T(G),\
                               T(SPC),\
-							  T(NUM),\
-							  T(ENTER),\
+                                     T(NUM),\
+                                     T(ENTER),\
                              END);\
             }\
         break;\
@@ -186,8 +186,8 @@ enum custom_keycodes {
                               T(T),\
                               T(E),\
                               T(SPC),\
-							  T(NUM),\
-							  T(ENTER),\
+                                     T(NUM),\
+                                     T(ENTER),\
                              END);\
             }\
         break;\
@@ -324,10 +324,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [SCREEN_NAV] = LAYOUT_ergodox(
        // left hand
        // left hand
-       KC_NO,  KC_TRNS,    KC_TRNS,              KC_TRNS,     		  KC_TRNS,               KC_TRNS,   KC_TRNS,
+       KC_NO,  KC_TRNS,    KC_TRNS,              KC_TRNS,                 KC_TRNS,               KC_TRNS,   KC_TRNS,
        KC_TRNS,KC_TRNS,    SCREEN_READREG_3,     SCREEN_READREG_2,    SCREEN_READREG_1,      KC_TRNS,   KC_TRNS,
        KC_TRNS,KC_TRNS,    SCREEN_PASTEREG_3,    SCREEN_PASTEREG_2,   SCREEN_PASTEREG_1,     KC_TRNS,
-       KC_TRNS,KC_TRNS,    KC_TRNS,     		 KC_TRNS,     	      KC_TRNS,               KC_TRNS,   KC_TRNS,
+       KC_TRNS,KC_TRNS,    KC_TRNS,                KC_TRNS,                KC_TRNS,               KC_TRNS,   KC_TRNS,
                // bottom row
                KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
                                        // thumb cluster
@@ -337,7 +337,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // right hand
        KC_TRNS,    KC_TRNS,    KC_TRNS,        KC_TRNS,         KC_TRNS,         KC_TRNS,          KC_TRNS,
        KC_TRNS,    KC_TRNS,    KC_0,           KC_UP,           KC_DLR,          SCREEN_UP_JUMP,   KC_TRNS,
-                   KC_B,       KC_LEFT,        KC_DOWN,         KC_RIGHT,   	 KC_W,             SCREEN_COPY_MODE,
+                   KC_B,       KC_LEFT,        KC_DOWN,         KC_RIGHT,         KC_W,             SCREEN_COPY_MODE,
        KC_TRNS,    KC_TRNS,    S(KC_W),        S(KC_Y),         SCREEN_PASTE,    SCREEN_DOWN_JUMP, MEH(KC_V),
                    // bottom row (match functionality of base layer)
                    KC_TRNS,    KC_TRNS,        KC_TRNS,         KC_TRNS,    KC_TRNS,
@@ -421,17 +421,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           KC_0,    KC_DOT,  KC_PIPE, KC_BSLS,     MEH(KC_P),
     // thumb cluster
     KC_TRNS,KC_TRNS,
-	KC_TRNS,
-	KC_TRNS,KC_TRNS,KC_TRNS),
+     KC_TRNS,
+     KC_TRNS,KC_TRNS,KC_TRNS),
 
 
     [BROWSER_CONTROL] = LAYOUT_ergodox(
-		   // left hand
+             // left hand
            KC_TRNS, KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,      KC_TRNS, KC_TRNS,
            KC_TRNS, KC_TRNS,      KC_BTN3,       KC_MS_U,       KC_BTN1,      KC_BTN2, KC_TRNS,
            KC_TRNS, KC_TRNS,      KC_MS_L,       KC_MS_D,       KC_MS_R,      KC_TRNS,
            KC_TRNS, KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,      KC_TRNS, KC_TRNS,
-		   // bottom row
+             // bottom row
            KC_TRNS, KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,
 
                                                KC_TRNS, KC_TRNS,
@@ -440,7 +440,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // right hand
            KC_TRNS,  KC_TRNS,   KC_TRNS,            KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,
            KC_TRNS,  KC_UP,     KC_PGUP,            KC_PGDN,      KC_MS_WH_UP,   KC_TRNS,       KC_TRNS,
-                     KC_DOWN,   RCTL(KC_PGUP), 	    RCTL(KC_PGDN),KC_MS_WH_DOWN, LALT(KC_LEFT), KC_TRNS,
+                     KC_DOWN,   RCTL(KC_PGUP),          RCTL(KC_PGDN),KC_MS_WH_DOWN, LALT(KC_LEFT), KC_TRNS,
            KC_TRNS,  KC_TRNS,   RCTL(KC_1),         RCTL(KC_9),   KC_F6,         KC_F5,         KC_TRNS,
                                 // bottom row
                                 RCTL(LSFT(KC_TAB)), RCTL(KC_TAB),      KC_TRNS,       KC_TRNS,       KC_TRNS,
@@ -627,7 +627,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             tap_code(KC_5);
             tap_code(KC_UP);
             break;
-		case SCREEN_DOWN_JUMP:
+          case SCREEN_DOWN_JUMP:
             tap_code(KC_5);
             tap_code(KC_DOWN);
             break;
@@ -692,11 +692,11 @@ void matrix_scan_user(void) {
         case SHELL_SCREEN:
         case KEYNAV:
         case KEYSEL:
-		case SCREEN_NAV:
+          case SCREEN_NAV:
         case VSCODE:
             ergodox_right_led_3_on();
             break;
-	case BROWSER_CONTROL:
+     case BROWSER_CONTROL:
             ergodox_right_led_2_on();
             ergodox_right_led_3_on();
             break;

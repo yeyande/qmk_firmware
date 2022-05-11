@@ -97,7 +97,7 @@ void  process_record_fled(uint16_t keycode, keyrecord_t *record) {
         break; // Process all other keycodes normally
       }
 
-	return;
+     return;
 }
 
 void fled_load_conf(void) {

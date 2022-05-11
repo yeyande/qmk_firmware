@@ -48,12 +48,12 @@ bool babblepaste_chromeos(uint16_t keycode) {
     BABLM(BABL_FIND_NEXT, SS_LCTRL("g"));
     BABLM(BABL_FIND_PREV, OMSFT(IMCTL(X_G)));
     BABLM(BABL_WINDOW_NEW, IMCTL(X_N));
-    //	BABLM( BABL_FIND_REPLACE,		() ); // not part of Chrome
-    // BABLM( BABL_RUNAPP, 	SS_TAP(X_LGUI) ); // not sure of this
+    //     BABLM( BABL_FIND_REPLACE,          () ); // not part of Chrome
+    // BABLM( BABL_RUNAPP,      SS_TAP(X_LGUI) ); // not sure of this
     BABLM(BABL_SWITCH_APP_NEXT, IMALT(X_TAB));
     BABLM(BABL_SWITCH_APP_LAST, OMSFT(IMALT(X_TAB)));
     BABLM(BABL_CLOSE_APP, OMSFT(IMCTL(X_W)));
-    // BABLM( BABL_HELP,		OMCTL(IMALT(X_SLASH))	); // general help
+    // BABLM( BABL_HELP,          OMCTL(IMALT(X_SLASH))     ); // general help
     BABLM(BABL_HELP, IMCTL(X_SLASH));  // this is keyboard accelerator lookup
     BABLM(BABL_LOCK, SS_LGUI("l"));    // should be caps?
     BABLM(BABL_SCREENCAPTURE, OMSFT(IMCTL(X_F5)));

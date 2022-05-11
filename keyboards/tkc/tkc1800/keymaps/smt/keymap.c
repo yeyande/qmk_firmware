@@ -147,17 +147,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef OLED_DRIVER_ENABLE
 void oled_task_user(void) {
     oled_write_P(PSTR("TKC1800\n"),false);
-	// Host Keyboard Layer Status
+     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
 
     switch (get_highest_layer(layer_state)) {
         case QWERTY:
             oled_write_P(PSTR("Base\n"), false);
             break;
-		case COLEMAK:
+          case COLEMAK:
             oled_write_P(PSTR("Colemak\n"), false);
             break;
-		case DVORAK:
+          case DVORAK:
             oled_write_P(PSTR("Dvorak\n"), false);
             break;
         case FUNCTION:

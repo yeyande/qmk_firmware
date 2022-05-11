@@ -50,7 +50,7 @@ bool babblePaste_win(uint16_t keycode) {
     BABLM(BABL_SELECT_ALL, SS_LCTRL("a"));
     BABLM(BABL_FIND, SS_LCTRL("f"));
     BABLM(BABL_FIND_NEXT, SS_TAP(X_F3));
-    // BABLM( BABL_FIND_PREV, 	SS_TAP(X_F3) ); // doesn't have a standard one?
+    // BABLM( BABL_FIND_PREV,      SS_TAP(X_F3) ); // doesn't have a standard one?
     BABLM(BABL_FIND_REPLACE, SS_LCTRL("h"));
     BABLM(BABL_RUNAPP, SS_LGUI("r"));
     BABLM(BABL_SWITCH_APP_NEXT, IMALT(X_TAB));
@@ -108,7 +108,7 @@ bool babblePaste_win(uint16_t keycode) {
     BABLM(BABL_APP_PASTE_VALUES, OMCTL(IMALT(X_V)) "v");
 #                    endif
     BABLM(BABL_APP_CENTER_ALIGN, IMALT(X_H) "ac");
-    // BABLM( BABL_APP_CLEAR_FORMATTING, 	OMCTL(IMGUI(X_G)) ); // this isn't native. https://support.office.com/en-us/article/Clear-all-text-formatting-C094C4DA-7F09-4CEA-9A8D-C166949C9C80#OfficeVersion=macOS
+    // BABLM( BABL_APP_CLEAR_FORMATTING,      OMCTL(IMGUI(X_G)) ); // this isn't native. https://support.office.com/en-us/article/Clear-all-text-formatting-C094C4DA-7F09-4CEA-9A8D-C166949C9C80#OfficeVersion=macOS
     BABLM(BABL_APP_SCROLL_ACTIVE_CELL, IMCTL(X_BSPACE));
     BABLM(BABL_NEWLINE_IN_CELL, IMALT(X_ENTER));
     BABLM(BABL_INSERT_COMMENT, IMSFT(X_F2));
@@ -135,8 +135,8 @@ bool babblePaste_win(uint16_t keycode) {
 
 #            endif  // BABL_APP_CELLS
 
-    // BABLM( BABL_SPLIT_FRAME_VERT,		()  );// no windows way?
-    // BABLM( BABL_UNSPLIT_FRAME_VERT,		()  );
+    // BABLM( BABL_SPLIT_FRAME_VERT,          ()  );// no windows way?
+    // BABLM( BABL_UNSPLIT_FRAME_VERT,          ()  );
     BABLM(BABL_SPLIT_FRAME_HORIZONTAL, OMALT(IMCTL(X_S)));    // word only
     BABLM(BABL_UNSPLIT_FRAME_HORIZONTAL, OMSFT(IMALT(X_C)));  // word
     // BABLM( BABL_NEXT_FRAME, () );//no windows way?

@@ -17,7 +17,7 @@
 #endif
 
 #ifdef TAPPING_TERM
-	#undef TAPPING_TERM
+     #undef TAPPING_TERM
 #endif // TAPPING_TERM
 #define TAPPING_TERM 200
 //if no chord during tapping term, do the keystroke

@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cordillera.h"
 
 void keyboard_pre_init_kb(void) {
-	led_init_ports();
+     led_init_ports();
     keyboard_pre_init_user();
 }
 

@@ -2,9 +2,9 @@
 
 enum centromere_layers
 {
-	_STD,
-	_NUM,
-	_FN
+     _STD,
+     _NUM,
+     _FN
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -53,9 +53,9 @@ void matrix_scan_user(void) {
     uint8_t layer = get_highest_layer(layer_state);
 
     switch (layer) {
-    	case _STD:
-    		set_led_off;
-    		break;
+         case _STD:
+              set_led_off;
+              break;
         case _FN:
             set_led_blue;
             break;

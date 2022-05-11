@@ -52,15 +52,15 @@ bool babblePaste_emacs(uint16_t keycode) {
     BABLM(BABL_FIND_NEXT, SS_LCTRL("s"));
     BABLM(BABL_FIND_PREV, SS_LCTRL("r"));
     BABLM(BABL_FIND_REPLACE, OMALT(IMSFT(X_5)));
-    // BABLM( BABL_RUNAPP , 			//(SS_LALT("x") "shell")	 );// arguably
+    // BABLM( BABL_RUNAPP ,                //(SS_LALT("x") "shell")      );// arguably
     BABLM(BABL_RUNAPP, IMALT(X_X) "split-window" SS_TAP(X_ENTER));  // arguably
     BABLM(BABL_WINDOW_NEXT, SS_LCTRL("x") "o");
     BABLM(BABL_WINDOW_PREV, SS_LCTRL("x") "o");  // arguably
-    //	BABLM( BABL_WINDOW_NEW,		IMCTL(X_X)"n" ); //
+    //     BABLM( BABL_WINDOW_NEW,          IMCTL(X_X)"n" ); //
     BABLM(BABL_CLOSE_APP, SS_LCTRL("x") "c");
     BABLM(BABL_HELP, SS_LCTRL("h") "a");  // start search in help
-                                          // BABLM( BABL_LOCK,		()	); // lock buffer? Too many options.
-    // BABLM( BABL_SCREENCAPTURE,		()	); // requires plugin?
+                                          // BABLM( BABL_LOCK,          ()     ); // lock buffer? Too many options.
+    // BABLM( BABL_SCREENCAPTURE,          ()     ); // requires plugin?
 
 #        endif
 #        ifdef BABL_BROWSER
@@ -69,7 +69,7 @@ bool babblePaste_emacs(uint16_t keycode) {
 
 #        ifdef BABL_APP
     BABLM(BABL_APP_SAVE, SS_LCTL("x") SS_LCTL("s"));
-    /// BABLM( BABL_APP_MULTI_SELECT, 	SS_LCTRL("x") "rt" ); // arguably
+    /// BABLM( BABL_APP_MULTI_SELECT,      SS_LCTRL("x") "rt" ); // arguably
     BABLM(BABL_SPLIT_FRAME_VERT, SS_LCTRL("x") "3");
     BABLM(BABL_UNSPLIT_FRAME_VERT, SS_LCTRL("u") SS_LCTRL("x") "0");
     BABLM(BABL_SPLIT_FRAME_HORIZONTAL, SS_LCTRL("x") "2");

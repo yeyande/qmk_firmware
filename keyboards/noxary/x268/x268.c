@@ -20,10 +20,10 @@
 // These are only required if you want to perform custom actions.
 
 void matrix_init_kb(void) {
-	// put your keyboard start-up code here
-	// runs once when the firmware starts up
+     // put your keyboard start-up code here
+     // runs once when the firmware starts up
     setPinOutput(B0);
-	matrix_init_user();
+     matrix_init_user();
 }
 
 bool led_update_kb(led_t led_state) {

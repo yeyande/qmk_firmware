@@ -40,17 +40,17 @@ bool btn4_pressed = false;
 void check_encoder_buttons(void) {
     if (btn1_pressed && btn2_pressed && btn3_pressed && btn4_pressed) {
         // All 4 buttons pressed, toggle drawing mode
-	if (drawing_mode) {
+     if (drawing_mode) {
             dprintf("Turning drawing mode off.\n");
             drawing_mode = false;
             writePinLow(D6);
-	    unregister_code(KC_BTN1);
-	} else {
+         unregister_code(KC_BTN1);
+     } else {
             dprintf("Turning drawing mode on.\n");
             drawing_mode = true;
             writePinHigh(D6);
-	    register_code(KC_BTN1);
-	}
+         register_code(KC_BTN1);
+     }
     }
 }
 #endif
@@ -93,38 +93,38 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     if (keycode == ENC_BTN1) {
         if (record->event.pressed) {
             btn1_pressed = true;
-	    register_code(KC_BTN1);
-	} else {
+         register_code(KC_BTN1);
+     } else {
             btn1_pressed = false;
-	    unregister_code(KC_BTN1);
-	}
+         unregister_code(KC_BTN1);
+     }
     }
     if (keycode == ENC_BTN2) {
         if (record->event.pressed) {
             btn2_pressed = true;
-	    register_code(KC_BTN2);
-	} else {
+         register_code(KC_BTN2);
+     } else {
             btn2_pressed = false;
-	    unregister_code(KC_BTN2);
-	}
+         unregister_code(KC_BTN2);
+     }
     }
     if (keycode == ENC_BTN3) {
         if (record->event.pressed) {
             btn3_pressed = true;
-	    register_code(KC_BTN3);
-	} else {
+         register_code(KC_BTN3);
+     } else {
             btn3_pressed = false;
-	    unregister_code(KC_BTN3);
-	}
+         unregister_code(KC_BTN3);
+     }
     }
     if (keycode == ENC_BTN4) {
         if (record->event.pressed) {
             btn4_pressed = true;
-	    register_code(KC_BTN4);
-	} else {
+         register_code(KC_BTN4);
+     } else {
             btn4_pressed = false;
-	    unregister_code(KC_BTN4);
-	}
+         unregister_code(KC_BTN4);
+     }
     }
 
     check_encoder_buttons();

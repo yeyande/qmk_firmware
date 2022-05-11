@@ -21,12 +21,12 @@ bool babblePaste_readmux(uint16_t keycode) {
     BABLM(BABL_GO_RIGHT_WORD, SS_LALT("f"));
     BABLM(BABL_GO_START_LINE, SS_LCTL("a"));
     BABLM(BABL_GO_END_LINE, SS_LCTL("e"));
-    // BABLM( BABL_GO_START_DOC		,END );// tmux?
-    // BABLM( BABL_GO_END_DOC		,END );  // tmux?
+    // BABLM( BABL_GO_START_DOC          ,END );// tmux?
+    // BABLM( BABL_GO_END_DOC          ,END );  // tmux?
     BABLM(BABL_GO_NEXT_LINE, SS_LCTL("n"));
     BABLM(BABL_GO_PREV_LINE, SS_LCTL("p"));
-    // BABLM( BABL_GO_PARA_START,	// undefined
-    // BABLM( BABL_GO_PARA_END,	 	// undefinedBABLM( BABL_PGDN ,
+    // BABLM( BABL_GO_PARA_START,     // undefined
+    // BABLM( BABL_GO_PARA_END,           // undefinedBABLM( BABL_PGDN ,
 
     BABLM(BABL_PGUP, SS_TAP(X_PGUP));
     BABLM(BABL_PGDN, SS_TAP(X_PGDOWN));
@@ -41,13 +41,13 @@ bool babblePaste_readmux(uint16_t keycode) {
     BABLM(BABL_UNDO, SS_LALT("r"));
     BABLM(BABL_REDO, SS_LCTL("x") "c");  // arguably
     BABLM(BABL_CUT, SS_LCTL("k"));       // wrong half the time
-    // BABLM( BABL_COPY		,END );
+    // BABLM( BABL_COPY          ,END );
     BABLM(BABL_PASTE, SS_LCTL("y"));
     BABLM(BABL_SELECT_ALL, SS_LCTL("aky"));
     BABLM(BABL_FIND, SS_LCTL("r"));  // search history
     BABLM(BABL_FIND_NEXT, SS_LCTL("r"));
     BABLM(BABL_FIND_PREV, SS_LCTL("s"));
-    // BABLM( BABL_FIND_REPLACE		,END ); // not offered in readline
+    // BABLM( BABL_FIND_REPLACE          ,END ); // not offered in readline
     BABLM(BABL_RUNAPP, TMUX "c");           // tmux
     BABLM(BABL_SWITCH_APP_NEXT, TMUX "n");  // tmux
     BABLM(BABL_SWITCH_APP_LAST, TMUX "p");  // tmux

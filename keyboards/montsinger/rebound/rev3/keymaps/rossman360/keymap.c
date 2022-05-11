@@ -82,7 +82,7 @@ void oled_task_user(void) {
         case _BASE:
             oled_write_P(PSTR("Rebound\n"), false);
             oled_write_P(PSTR("Rev3.1\n"), false);
-	    break;
+         break;
         case _FN1:
             oled_write_P(PSTR("Fn\n"), false);
             break;

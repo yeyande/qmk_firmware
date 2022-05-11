@@ -69,7 +69,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 1) { /* left encoder*/
         switch(get_highest_layer(layer_state)){
 
-			 case _NAV:
+                case _NAV:
                 if (clockwise) {
                 tap_code16(C(KC_TAB));
                 } else {
@@ -96,7 +96,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
       }
     } else if (index == 0) { /* right encoder */
         switch(get_highest_layer(layer_state)){
-				   
+                       
             case _SYM:
                 if (clockwise) {
                 tap_code(KC_MPRV);

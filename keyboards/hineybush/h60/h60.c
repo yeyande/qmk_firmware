@@ -17,9 +17,9 @@
 #include "h60.h"
 
 void matrix_init_kb(void) {
-	// put your keyboard start-up code here
-	// runs once when the firmware starts up
-   	setPinOutput(C6);
+     // put your keyboard start-up code here
+     // runs once when the firmware starts up
+        setPinOutput(C6);
 }
 
 bool led_update_kb(led_t led_state) {

@@ -163,21 +163,21 @@ int bootTimeout;
 
 void init_hsv(void) {
     // fetch what the brightness was last sesion
-	v = rgblight_get_val();
+     v = rgblight_get_val();
     rgblight_sethsv(h,s,v);
 }
 
 // fetch current HSV vals
 void get_hsv(void) {
-	h = rgblight_get_hue();
-	s = rgblight_get_sat();
-	v = rgblight_get_val();
+     h = rgblight_get_hue();
+     s = rgblight_get_sat();
+     v = rgblight_get_val();
 }
 
 // reset HSV vals
 void reset_hsv(void) {
     int currentV = rgblight_get_val();
-	rgblight_sethsv(h,s,currentV);
+     rgblight_sethsv(h,s,currentV);
 }
 
 // deterimes when to stop bootup animation

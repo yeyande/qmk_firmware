@@ -15,18 +15,18 @@ https://github.com/andygock/avr-uart
 
 LICENSE:
 
-	Copyright (C) 2012 Andy Gock
-	Copyright (C) 2006 Peter Fleury
+     Copyright (C) 2012 Andy Gock
+     Copyright (C) 2006 Peter Fleury
 
-	This program is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	any later version.
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     any later version.
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
 
 ************************************************************************/
 
@@ -92,7 +92,7 @@ were adapted from the Arduino HardwareSerial.h library by Tim Sharpe on
 /* Enable USART 1, 2, 3 as required */
 /* Can be defined in compiler symbol setup with -D option (preferred) */
 #ifndef USART0_ENABLED
-	#define USART0_ENABLED /**< Enable USART0 */
+     #define USART0_ENABLED /**< Enable USART0 */
 #endif
 //#define USART1_ENABLED
 //#define USART2_ENABLED 
@@ -101,65 +101,65 @@ were adapted from the Arduino HardwareSerial.h library by Tim Sharpe on
 /* Set size of receive and transmit buffers */
 
 #ifndef UART_RX0_BUFFER_SIZE
-	#define UART_RX0_BUFFER_SIZE 128 /**< Size of the circular receive buffer, must be power of 2 */
+     #define UART_RX0_BUFFER_SIZE 128 /**< Size of the circular receive buffer, must be power of 2 */
 #endif
 #ifndef UART_RX1_BUFFER_SIZE
-	#define UART_RX1_BUFFER_SIZE 128 /**< Size of the circular receive buffer, must be power of 2 */
+     #define UART_RX1_BUFFER_SIZE 128 /**< Size of the circular receive buffer, must be power of 2 */
 #endif
 #ifndef UART_RX2_BUFFER_SIZE
-	#define UART_RX2_BUFFER_SIZE 128 /**< Size of the circular receive buffer, must be power of 2 */
+     #define UART_RX2_BUFFER_SIZE 128 /**< Size of the circular receive buffer, must be power of 2 */
 #endif
 #ifndef UART_RX3_BUFFER_SIZE
-	#define UART_RX3_BUFFER_SIZE 128 /**< Size of the circular receive buffer, must be power of 2 */
+     #define UART_RX3_BUFFER_SIZE 128 /**< Size of the circular receive buffer, must be power of 2 */
 #endif
 
 #ifndef UART_TX0_BUFFER_SIZE
-	#define UART_TX0_BUFFER_SIZE 128 /**< Size of the circular transmit buffer, must be power of 2 */
+     #define UART_TX0_BUFFER_SIZE 128 /**< Size of the circular transmit buffer, must be power of 2 */
 #endif
 #ifndef UART_TX1_BUFFER_SIZE
-	#define UART_TX1_BUFFER_SIZE 128 /**< Size of the circular transmit buffer, must be power of 2 */
+     #define UART_TX1_BUFFER_SIZE 128 /**< Size of the circular transmit buffer, must be power of 2 */
 #endif
 #ifndef UART_TX2_BUFFER_SIZE
-	#define UART_TX2_BUFFER_SIZE 128 /**< Size of the circular transmit buffer, must be power of 2 */
+     #define UART_TX2_BUFFER_SIZE 128 /**< Size of the circular transmit buffer, must be power of 2 */
 #endif
 #ifndef UART_TX3_BUFFER_SIZE
-	#define UART_TX3_BUFFER_SIZE 128 /**< Size of the circular transmit buffer, must be power of 2 */
+     #define UART_TX3_BUFFER_SIZE 128 /**< Size of the circular transmit buffer, must be power of 2 */
 #endif
 
 /* Check buffer sizes are not too large for 8-bit positioning */
 
 #if (UART_RX0_BUFFER_SIZE > 256 & !defined(USART0_LARGE_BUFFER))
-	#error "Buffer too large, please use -DUSART0_LARGE_BUFFER switch in compiler options"
+     #error "Buffer too large, please use -DUSART0_LARGE_BUFFER switch in compiler options"
 #endif
 
 #if (UART_RX1_BUFFER_SIZE > 256 & !defined(USART1_LARGE_BUFFER))
-	#error "Buffer too large, please use -DUSART1_LARGE_BUFFER switch in compiler options"
+     #error "Buffer too large, please use -DUSART1_LARGE_BUFFER switch in compiler options"
 #endif
 
 #if (UART_RX2_BUFFER_SIZE > 256 & !defined(USART2_LARGE_BUFFER))
-	#error "Buffer too large, please use -DUSART2_LARGE_BUFFER switch in compiler options"
+     #error "Buffer too large, please use -DUSART2_LARGE_BUFFER switch in compiler options"
 #endif
 
 #if (UART_RX3_BUFFER_SIZE > 256 & !defined(USART3_LARGE_BUFFER))
-	#error "Buffer too large, please use -DUSART3_LARGE_BUFFER switch in compiler options"
+     #error "Buffer too large, please use -DUSART3_LARGE_BUFFER switch in compiler options"
 #endif
 
 /* Check buffer sizes are not too large for *_LARGE_BUFFER operation (16-bit positioning) */
 
 #if (UART_RX0_BUFFER_SIZE > 32768)
-	#error "Buffer too large, maximum allowed is 32768 bytes"
+     #error "Buffer too large, maximum allowed is 32768 bytes"
 #endif
 
 #if (UART_RX1_BUFFER_SIZE > 32768)
-	#error "Buffer too large, maximum allowed is 32768 bytes"
+     #error "Buffer too large, maximum allowed is 32768 bytes"
 #endif
 
 #if (UART_RX2_BUFFER_SIZE > 32768)
-	#error "Buffer too large, maximum allowed is 32768 bytes"
+     #error "Buffer too large, maximum allowed is 32768 bytes"
 #endif
 
 #if (UART_RX3_BUFFER_SIZE > 32768)
-	#error "Buffer too large, maximum allowed is 32768 bytes"
+     #error "Buffer too large, maximum allowed is 32768 bytes"
 #endif
 
 /** @brief  UART Baudrate Expression
@@ -177,19 +177,19 @@ were adapted from the Arduino HardwareSerial.h library by Tim Sharpe on
 /* test if the size of the circular buffers fits into SRAM */
 
 #if defined(USART0_ENABLED) && ( (UART_RX0_BUFFER_SIZE+UART_TX0_BUFFER_SIZE) >= (RAMEND-0x60))
-	#error "size of UART_RX0_BUFFER_SIZE + UART_TX0_BUFFER_SIZE larger than size of SRAM"
+     #error "size of UART_RX0_BUFFER_SIZE + UART_TX0_BUFFER_SIZE larger than size of SRAM"
 #endif
 
 #if defined(USART1_ENABLED) && ( (UART_RX1_BUFFER_SIZE+UART_TX1_BUFFER_SIZE) >= (RAMEND-0x60))
-	#error "size of UART_RX1_BUFFER_SIZE + UART_TX1_BUFFER_SIZE larger than size of SRAM"
+     #error "size of UART_RX1_BUFFER_SIZE + UART_TX1_BUFFER_SIZE larger than size of SRAM"
 #endif
 
 #if defined(USART2_ENABLED) && ( (UART_RX2_BUFFER_SIZE+UART_RX2_BUFFER_SIZE) >= (RAMEND-0x60))
-	#error "size of UART_RX2_BUFFER_SIZE + UART_TX2_BUFFER_SIZE larger than size of SRAM"
+     #error "size of UART_RX2_BUFFER_SIZE + UART_TX2_BUFFER_SIZE larger than size of SRAM"
 #endif
 
 #if defined(USART3_ENABLED) && ( (UART_RX3_BUFFER_SIZE+UART_RX3_BUFFER_SIZE) >= (RAMEND-0x60))
-	#error "size of UART_RX3_BUFFER_SIZE + UART_TX3_BUFFER_SIZE larger than size of SRAM"
+     #error "size of UART_RX3_BUFFER_SIZE + UART_TX3_BUFFER_SIZE larger than size of SRAM"
 #endif
 
 /* 

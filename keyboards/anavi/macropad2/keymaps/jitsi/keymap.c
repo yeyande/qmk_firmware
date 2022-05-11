@@ -32,5 +32,5 @@ const uint16_t PROGMEM test_combo[] = {KC_M, KC_V, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {COMBO_ACTION(test_combo)};
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
-	backlight_step();
+     backlight_step();
 }

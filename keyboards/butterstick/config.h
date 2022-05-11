@@ -8,7 +8,7 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    g Heavy Industries
 #define PRODUCT         Butter Stick
-#define VERSION 		"Paula Deen"
+#define VERSION           "Paula Deen"
 
 #define DEBOUNCE 5
 #define FORCE_NKRO

@@ -5,61 +5,61 @@
 
 // Tap Dance Enums Init
 enum {
-	OP_QT = 0,
-	CL_QT,
-	TD_DQ,
-	TL,
+     OP_QT = 0,
+     CL_QT,
+     TD_DQ,
+     TL,
 };
 
 // Tap Dance Functions
 void tri_open(qk_tap_dance_state_t *state, void *user_data) {
-	if (state->count == 1) {
-		tap_code16(KC_LPRN);
-	} else if (state->count == 2) {
-		tap_code(KC_LBRC);
-	} else if (state->count == 3) {
-		tap_code16(S(KC_LBRC));
-	}
+     if (state->count == 1) {
+          tap_code16(KC_LPRN);
+     } else if (state->count == 2) {
+          tap_code(KC_LBRC);
+     } else if (state->count == 3) {
+          tap_code16(S(KC_LBRC));
+     }
 }
 
 void tri_close(qk_tap_dance_state_t *state, void *user_data) {
-	if (state->count == 1) {
-		tap_code16(KC_RPRN);
-	} else if (state->count == 2) {
-		tap_code(KC_RBRC);
-	} else if (state->count == 3) {
-		tap_code16(S(KC_RBRC));
-	}
+     if (state->count == 1) {
+          tap_code16(KC_RPRN);
+     } else if (state->count == 2) {
+          tap_code(KC_RBRC);
+     } else if (state->count == 3) {
+          tap_code16(S(KC_RBRC));
+     }
 }
 
 void dquote(qk_tap_dance_state_t *state, void *user_data) {
-	if (state->count == 1) {
-		if (state->interrupted)
-			tap_code(KC_QUOT);
-		else if (state->pressed)
-			tap_code(KC_QUOT);
-		else
-			tap_code16(KC_DQUO),
-			tap_code(KC_SPC);
-	}
+     if (state->count == 1) {
+          if (state->interrupted)
+               tap_code(KC_QUOT);
+          else if (state->pressed)
+               tap_code(KC_QUOT);
+          else
+               tap_code16(KC_DQUO),
+               tap_code(KC_SPC);
+     }
 }
 
 void tilded(qk_tap_dance_state_t *state, void *user_data) {
-	if (state->count == 1) {
-		if (state->interrupted)
-			tap_code16(KC_TILD);
-		else if (state->pressed)
-			tap_code16(KC_TILD);
-		else
-			tap_code16(KC_AT);
-	}
+     if (state->count == 1) {
+          if (state->interrupted)
+               tap_code16(KC_TILD);
+          else if (state->pressed)
+               tap_code16(KC_TILD);
+          else
+               tap_code16(KC_AT);
+     }
 } 
   
 qk_tap_dance_action_t tap_dance_actions[] = {
-	[OP_QT] = ACTION_TAP_DANCE_FN(tri_open),
-	[CL_QT] = ACTION_TAP_DANCE_FN(tri_close),
-	[TD_DQ] = ACTION_TAP_DANCE_FN(dquote),
-	[TL] = ACTION_TAP_DANCE_FN(tilded),
+     [OP_QT] = ACTION_TAP_DANCE_FN(tri_open),
+     [CL_QT] = ACTION_TAP_DANCE_FN(tri_close),
+     [TD_DQ] = ACTION_TAP_DANCE_FN(dquote),
+     [TL] = ACTION_TAP_DANCE_FN(tilded),
 };
 
 // [Layer Keymaps] -----------------------------------------------------------//
@@ -96,4 +96,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-	
+     

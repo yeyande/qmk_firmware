@@ -62,6 +62,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* OLED Configuration */
 #ifdef OLED_DRIVER_ENABLE
-    #define OLED_TIMEOUT	    60000
+    #define OLED_TIMEOUT         60000
     #define OLED_LOGO_TIMEOUT   3000  // How long (in ms) the logo appears at start up
 #endif

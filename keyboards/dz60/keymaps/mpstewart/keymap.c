@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * │ctrl│alt │win │                        │win │alt │menu│ctrl│  │40  │41  │43  │46                      │4a  │4b  │4d  │4e  │
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘  └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
 */
-	[_BASE] = LAYOUT_60_ansi_split_bs_rshift(
+     [_BASE] = LAYOUT_60_ansi_split_bs_rshift(
  //    _0        _1        _2      _3       _4      _5      _6      _7       _8     _9       _A       _B        _C       _D           _E
 /*0_*/ KC_GESC,  KC_1,     KC_2,   KC_3,    KC_4,   KC_5,   KC_6,   KC_7,    KC_8,  KC_9,    KC_0,    KC_MINS,  KC_EQL,  KC_BSLS,     KC_GRV,
 /*1_*/ KC_TAB,             KC_Q,   KC_W,    KC_E,   KC_R,   KC_T,   KC_Y,    KC_U,  KC_I,    KC_O,    KC_P,     KC_LBRC, KC_RBRC,     KC_BSPC,
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘  └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  * XXX = RESET (dfu mode)
 */
-	[_FN] = LAYOUT_60_ansi_split_bs_rshift(
+     [_FN] = LAYOUT_60_ansi_split_bs_rshift(
  //    _0       _1       _2       _3       _4        _5       _6       _7       _8       _9       _A       _B       _C       _D         _E
 /*0_*/ KC_SLEP, KC_F1,   KC_F2  , KC_F3,   KC_F4,    KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_INS,    KC_DEL,
 /*1_*/ KC_CAPS,          KC_BRID,  KC_BRIU,  KC_NO,    RESET,   KC_NO,   KC_NO,   KC_NO,   KC_PSCR, KC_SLCK, KC_PAUS, KC_UP,   KC_NO,     KC_NO,
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |                             _    |      _     |               _               |     _      |     _                   |
  * `----------------------------------------------------------------------------------------------------------------------'
  */
-	[_LIGHTS] = LAYOUT_60_ansi_split_bs_rshift(
+     [_LIGHTS] = LAYOUT_60_ansi_split_bs_rshift(
 //     _0       _1       _2       _3       _4        _5        _6       _7       _8       _9      _A      _B      _C      _D      _E
 /*0_*/ RGB_TOG, RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G, KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
 /*1_*/ RGB_MOD,          RGB_HUI, RGB_SAI, RGB_VAI,  KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,

@@ -19,13 +19,13 @@
 #include QMK_KEYBOARD_H
 
 #ifndef OPT_DEBOUNCE
-#    define OPT_DEBOUNCE 5  // (ms) 			Time between scroll events
+#    define OPT_DEBOUNCE 5  // (ms)                Time between scroll events
 #endif
 #ifndef SCROLL_BUTT_DEBOUNCE
-#    define SCROLL_BUTT_DEBOUNCE 100  // (ms) 			Time between scroll events
+#    define SCROLL_BUTT_DEBOUNCE 100  // (ms)                Time between scroll events
 #endif
 #ifndef OPT_THRES
-#    define OPT_THRES 150  // (0-1024) 	Threshold for actication
+#    define OPT_THRES 150  // (0-1024)      Threshold for actication
 #endif
 #ifndef OPT_SCALE
 #    define OPT_SCALE 1  // Multiplier for wheel

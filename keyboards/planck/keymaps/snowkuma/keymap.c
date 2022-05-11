@@ -71,14 +71,14 @@ void safe_reset(qk_tap_dance_state_t *state, void *user_data) {
     }
 }; void tilde_home(qk_tap_dance_state_t *state, void *user_data) {
     if (state->count > 2) {
-	register_code(KC_LSFT);
+     register_code(KC_LSFT);
         register_code(KC_GRV);
     }
     else {
         register_code(KC_LSFT);
         register_code(KC_GRV);
-	if (state->count > 1) {
-	// Outputs ~/ if tilde tapped twice
+     if (state->count > 1) {
+     // Outputs ~/ if tilde tapped twice
           unregister_code(KC_GRV);
           unregister_code(KC_LSFT);
           register_code(KC_SLSH);
@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_COLEMAK] = LAYOUT_planck_grid(
     Q_CTL,   W_ALT,   F_GUI,   KC_P,    KC_G,    _______, _______, KC_J,    KC_L,    U_GUI,   Y_ALT,   SCL_CTL,
     KC_A,    KC_R,    KC_S,    T_SFT,   KC_D,    _______, _______, KC_H,    N_SFT,   KC_E,    KC_I,    KC_O,
-    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______, _______, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_QUOT,	
+    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______, _______, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_QUOT,     
     _______, _______, _______, ESC_NUM, BSP_REG, MIN_ARR, TAB_SFT, SPC_SYM, ENT_THU, _______, _______, _______
 ),
 

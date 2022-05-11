@@ -118,17 +118,17 @@ float caps_song_off[][2] = SONG(SCROLL_LOCK_ON_SOUND);
 
 // Custom songs for DPAD layer status
 float dpad_song_on[][2] = {
-	HD_NOTE(_A4), HD_NOTE(_A4), HD_NOTE(_A4),
-	QD_NOTE(_F4), QD_NOTE(_C5), HD_NOTE(_A4),
-	QD_NOTE(_F4),  QD_NOTE(_C5), WD_NOTE(_A4)
+     HD_NOTE(_A4), HD_NOTE(_A4), HD_NOTE(_A4),
+     QD_NOTE(_F4), QD_NOTE(_C5), HD_NOTE(_A4),
+     QD_NOTE(_F4),  QD_NOTE(_C5), WD_NOTE(_A4)
 };
 
 float dpad_song_off[][2] = {
-	ED_NOTE(_C6), ED_NOTE(_C6),
-	ED_NOTE(_C6), ED_NOTE(_C6),
-	W__NOTE(_REST), QD_NOTE(_GS5),
-	QD_NOTE(_AS5), Q__NOTE(_C6),
-	Q__NOTE(_AS5), Q__NOTE(_C6)
+     ED_NOTE(_C6), ED_NOTE(_C6),
+     ED_NOTE(_C6), ED_NOTE(_C6),
+     W__NOTE(_REST), QD_NOTE(_GS5),
+     QD_NOTE(_AS5), Q__NOTE(_C6),
+     Q__NOTE(_AS5), Q__NOTE(_C6)
 };
 #endif
 

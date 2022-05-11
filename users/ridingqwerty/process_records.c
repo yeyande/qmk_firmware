@@ -475,7 +475,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (get_mods() & MOD_BIT(KC_RALT)) {
           unregister_mods(MOD_BIT(KC_RALT));
           //send_unicode_hex_string("262D");
-	  tap_code(KC_BSPC);
+       tap_code(KC_BSPC);
           set_mods(MOD_BIT(KC_RALT));
           return false;
         }

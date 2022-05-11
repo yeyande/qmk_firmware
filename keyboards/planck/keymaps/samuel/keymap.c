@@ -121,69 +121,69 @@ return false;
 break;
 
 case KC_T_LALT:
-	if (record->event.pressed) {
-	   mod_press(KC_LPRN, KC_LALT, 0);
-	} else {
-	   mod_lift(KC_LPRN, KC_LALT, 0);
-	}
-	return false;
-	break;
+     if (record->event.pressed) {
+        mod_press(KC_LPRN, KC_LALT, 0);
+     } else {
+        mod_lift(KC_LPRN, KC_LALT, 0);
+     }
+     return false;
+     break;
 case KC_T_RALT:
-	if (record->event.pressed) {
-	   mod_press(KC_RPRN, KC_RALT, 1);
-	} else {
-	   mod_lift(KC_RPRN, KC_RALT, 1);
-	}
-	return false;
-	break;
+     if (record->event.pressed) {
+        mod_press(KC_RPRN, KC_RALT, 1);
+     } else {
+        mod_lift(KC_RPRN, KC_RALT, 1);
+     }
+     return false;
+     break;
 case KC_T_LGUI:
-	if (record->event.pressed) {
-	   mod_press(KC_SLASH, KC_LGUI, 2);
-	} else {
-	   mod_lift(KC_SLASH, KC_LGUI, 2);
-	}
-	return false;
-	break;
+     if (record->event.pressed) {
+        mod_press(KC_SLASH, KC_LGUI, 2);
+     } else {
+        mod_lift(KC_SLASH, KC_LGUI, 2);
+     }
+     return false;
+     break;
 case KC_T_RGUI:
-	if (record->event.pressed) {
-	   mod_press(KC_MINS, KC_RGUI, 3);
-	} else {
-	   mod_lift(KC_MINS, KC_RGUI, 3);
-	}
-	return false;
-	break;
+     if (record->event.pressed) {
+        mod_press(KC_MINS, KC_RGUI, 3);
+     } else {
+        mod_lift(KC_MINS, KC_RGUI, 3);
+     }
+     return false;
+     break;
 case KC_T_LCTL:
-	if (record->event.pressed) {
-	   mod_press(KC_LBRACKET, KC_LCTL, 4);
-	} else {
-	   mod_lift(KC_LBRACKET, KC_LCTL, 4);
-	}
-	return false;
-	break;
+     if (record->event.pressed) {
+        mod_press(KC_LBRACKET, KC_LCTL, 4);
+     } else {
+        mod_lift(KC_LBRACKET, KC_LCTL, 4);
+     }
+     return false;
+     break;
 case KC_T_RCTL:
-	if (record->event.pressed) {
-	   mod_press(KC_RBRACKET, KC_RCTL, 5);
-	} else {
-	   mod_lift(KC_RBRACKET, KC_RCTL, 5);
-	}
-	return false;
-	break;
+     if (record->event.pressed) {
+        mod_press(KC_RBRACKET, KC_RCTL, 5);
+     } else {
+        mod_lift(KC_RBRACKET, KC_RCTL, 5);
+     }
+     return false;
+     break;
 case KC_T_LSFT:
-	if (record->event.pressed) {
-	   mod_press(KC_TAB, KC_LSFT, 6);
-	} else {
-	   mod_lift(KC_TAB, KC_LSFT, 6);
-	}
-	return false;
-	break;
+     if (record->event.pressed) {
+        mod_press(KC_TAB, KC_LSFT, 6);
+     } else {
+        mod_lift(KC_TAB, KC_LSFT, 6);
+     }
+     return false;
+     break;
 case KC_T_RSFT:
-	if (record->event.pressed) {
-	   mod_press(KC_ENTER, KC_RSFT, 7);
-	} else {
-	   mod_lift(KC_ENTER, KC_RSFT, 7);
-	}
-	return false;
-	break;
+     if (record->event.pressed) {
+        mod_press(KC_ENTER, KC_RSFT, 7);
+     } else {
+        mod_lift(KC_ENTER, KC_RSFT, 7);
+     }
+     return false;
+     break;
 
 case KC_T_LRSE:
 if (record->event.pressed) {

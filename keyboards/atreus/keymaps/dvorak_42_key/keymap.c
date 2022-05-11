@@ -144,7 +144,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case W10_WORKSPACE_RIGHT:
         tap_code16(G(C(KC_RIGHT)));
         break;
-	}
+     }
   }
 
   return true;

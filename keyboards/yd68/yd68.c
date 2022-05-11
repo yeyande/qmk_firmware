@@ -16,21 +16,21 @@
 #include "yd68.h"
 
 void keyboard_pre_init_kb(void) {
-	//Backlight LEDs Output Low
-	setPinOutput(D6);
-	writePinLow(D6);
-	
-	//RGB power output low
-	setPinOutput(E2);
-	writePinLow(E2);
-	
-	//Bluetooth power output high
-	setPinOutput(B2);
-	writePinLow(B2);
-	
-	//RGB data output low
-	setPinOutput(B3);
-	writePinLow(B3);
-	
-	keyboard_pre_init_user();
+     //Backlight LEDs Output Low
+     setPinOutput(D6);
+     writePinLow(D6);
+     
+     //RGB power output low
+     setPinOutput(E2);
+     writePinLow(E2);
+     
+     //Bluetooth power output high
+     setPinOutput(B2);
+     writePinLow(B2);
+     
+     //RGB data output low
+     setPinOutput(B3);
+     writePinLow(B3);
+     
+     keyboard_pre_init_user();
 }

@@ -48,7 +48,7 @@ enum custom_keycodes_art {
   G_ADD,
   G_BRCH,
   G_C,
-  G_CHEC,	
+  G_CHEC,     
   G_COMM,
   G_DEV,
   G_DIFF,

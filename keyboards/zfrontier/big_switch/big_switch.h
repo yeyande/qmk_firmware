@@ -27,8 +27,8 @@
  * represents the switch matrix.
  */
 #define LAYOUT( \
-	K00 \
+     K00 \
 ) \
 { \
-	{ K00 }  \
+     { K00 }  \
 }

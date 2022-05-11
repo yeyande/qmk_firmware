@@ -139,7 +139,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         SEND_STRING("git push\n");
       }
       return false;
-	case KC_SCAP:
+     case KC_SCAP:
       if (record->event.pressed){
         layer_on(_CAPS);
         tap_code(KC_CAPS);
@@ -158,26 +158,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 void matrix_scan_user(void) {
     uint8_t layer = get_highest_layer(layer_state);
-	
+     
     switch (layer) {
-    	case _QWERTY:
-    	    set_led_green;
-    	    break;
-	    case _CAPS:
-			set_led_white;
-			break;
-	    case _NUMPAD:
+         case _QWERTY:
+             set_led_green;
+             break;
+         case _CAPS:
+               set_led_white;
+               break;
+         case _NUMPAD:
             set_led_blue;
             break;
-	    case _SYMBOLS:
+         case _SYMBOLS:
             set_led_red;
             break;
-	    case _MACROS:
-			set_led_cyan;
-			break;
-		case _NAV:
-			set_led_magenta;
-			break;
+         case _MACROS:
+               set_led_cyan;
+               break;
+          case _NAV:
+               set_led_magenta;
+               break;
         default:
             set_led_green;
             break;

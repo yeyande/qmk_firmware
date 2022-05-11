@@ -19,13 +19,13 @@
 #include "muse.h"
 
 enum preonic_layers {
-  _QWERTY,	// 0
-  _COLEMAK,	// 1
-  _DVORAK,	// 2
-  _NUMPAD,	// 3
-  _SYMBOL,	// 4
-  _BRACKET,	// 5
-  _ADJUST	// 6
+  _QWERTY,     // 0
+  _COLEMAK,     // 1
+  _DVORAK,     // 2
+  _NUMPAD,     // 3
+  _SYMBOL,     // 4
+  _BRACKET,     // 5
+  _ADJUST     // 6
 };
 
 enum preonic_keycodes {

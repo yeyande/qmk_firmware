@@ -24,37 +24,37 @@
 #include "version.h" // for QMK_BUILDDATE used in EEPROM magic
 
 void via_init_kb(void) {
-	fled_init();
+     fled_init();
 }
 
 void matrix_init_kb(void) {
     // If VIA is disabled, we still need to load settings
-	// Call via_init_kb() the same way as via_init(), with setting
-	// EEPROM valid afterwards.
+     // Call via_init_kb() the same way as via_init(), with setting
+     // EEPROM valid afterwards.
 #ifndef VIA_ENABLE
     fled_init();
     via_eeprom_set_valid(true);
 #endif // VIA_ENABLE
 
-	matrix_init_user();
+     matrix_init_user();
 }
 
 void matrix_scan_kb(void) {
-	// put your looping keyboard code here
-	// runs every cycle (a lot)
+     // put your looping keyboard code here
+     // runs every cycle (a lot)
 
-	matrix_scan_user();
+     matrix_scan_user();
 }
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     // Handle custom keycodes for front LED operation
     process_record_fled(keycode, record);
-	return process_record_user(keycode, record);
+     return process_record_user(keycode, record);
 }
 
 bool led_update_kb(led_t led_state) {
     fled_lock_update(led_state);
-	return led_update_user(led_state);
+     return led_update_user(led_state);
 }
 
 layer_state_t layer_state_set_kb(layer_state_t state) {

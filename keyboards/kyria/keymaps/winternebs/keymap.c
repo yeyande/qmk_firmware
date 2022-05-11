@@ -16,7 +16,7 @@
 #include QMK_KEYBOARD_H
 
 #ifdef CONSOLE_ENABLE
-	#include <print.h>
+     #include <print.h>
 #endif
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
@@ -27,11 +27,11 @@ enum custom_keycodes {
 };
 
 enum layers {
-	_QWERTY = 0,
-	_WORKMAN,
-	_LOWER,
-	_RAISE,
-	_ADJUST
+     _QWERTY = 0,
+     _WORKMAN,
+     _LOWER,
+     _RAISE,
+     _ADJUST
 };
 #define RAISE LT(_RAISE, KC_ENT)
 #define LOWER MO(_LOWER)
@@ -57,13 +57,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        | GUI  |  ALT | LOWER| Space|      |  | SHIFT| Bksp | RAISE|      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-	[_QWERTY] = LAYOUT(
-	KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    _______,
-	KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                          KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-	KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, _______, _______,     _______, _______,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,
-							   KC_LGUI, KC_LALT, LOWER, KC_SPC, _______,     KC_LSFT, KC_BSPC, RAISE, _______, _______
-	),
-	/*
+     [_QWERTY] = LAYOUT(
+     KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    _______,
+     KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                          KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+     KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, _______, _______,     _______, _______,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,
+                                      KC_LGUI, KC_LALT, LOWER, KC_SPC, _______,     KC_LSFT, KC_BSPC, RAISE, _______, _______
+     ),
+     /*
  * Workman Layer
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
@@ -76,12 +76,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |  GUI |  ESC | LOWER| Space| SWAP |  | SWAP | Bksp | RAISE|      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-	[_WORKMAN] = LAYOUT(
-	KC_ESC, KC_Q,    KC_D,    KC_R,    KC_W,    KC_B,                                          KC_J,    KC_F,    KC_U,    KC_P,    KC_SCLN, KC_BSPC,
-	KC_TAB, HOME_A,  HOME_S,  HOME_H,  HOME_T,  KC_G,                                          KC_Y,    HOME_N,  HOME_E,  HOME_O,  HOME_I,  KC_QUOT,
+     [_WORKMAN] = LAYOUT(
+     KC_ESC, KC_Q,    KC_D,    KC_R,    KC_W,    KC_B,                                          KC_J,    KC_F,    KC_U,    KC_P,    KC_SCLN, KC_BSPC,
+     KC_TAB, HOME_A,  HOME_S,  HOME_H,  HOME_T,  KC_G,                                          KC_Y,    HOME_N,  HOME_E,  HOME_O,  HOME_I,  KC_QUOT,
     XXXXXXX, KC_Z,    KC_X,    KC_M,    KC_C,    KC_V,  KC_LSFT, KC_SPC,     SH_MON, KC_ENT,    KC_K,    KC_L,    KC_COMM, KC_DOT,  KC_SLSH, XXXXXXX,
-							   KC_LGUI, KC_LALT,  LOWER, KC_SPC,  SH_MON,     SH_MON, KC_BSPC,   RAISE,   XXXXXXX, _______
-	),
+                                      KC_LGUI, KC_LALT,  LOWER, KC_SPC,  SH_MON,     SH_MON, KC_BSPC,   RAISE,   XXXXXXX, _______
+     ),
 /*
  * Lower Layer: NUM/symb 
  *
@@ -95,12 +95,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |prints|      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-	[_LOWER] = LAYOUT(
-	KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                            KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
-	KC_DEL,  KC_DLR,  KC_PLUS, KC_LPRN, KC_RPRN, KC_AT,                                           KC_PIPE, KC_MINS, KC_EQL,  KC_UNDS, KC_ASTR, KC_BSLS,
-	_______, KC_EXLM, KC_HASH, KC_LCBR, KC_RCBR, KC_TILD, _______, _______,     _______, _______, KC_AMPR, KC_LBRC, KC_RBRC, KC_PERC, KC_CIRC, _______,
-							   KC_PSCR, _______, _______, _______, _______,     _______, KC_BSPC, _______, _______, _______
-	),
+     [_LOWER] = LAYOUT(
+     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                            KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
+     KC_DEL,  KC_DLR,  KC_PLUS, KC_LPRN, KC_RPRN, KC_AT,                                           KC_PIPE, KC_MINS, KC_EQL,  KC_UNDS, KC_ASTR, KC_BSLS,
+     _______, KC_EXLM, KC_HASH, KC_LCBR, KC_RCBR, KC_TILD, _______, _______,     _______, _______, KC_AMPR, KC_LBRC, KC_RBRC, KC_PERC, KC_CIRC, _______,
+                                      KC_PSCR, _______, _______, _______, _______,     _______, KC_BSPC, _______, _______, _______
+     ),
  /*
   * Raise Layer: VIM Movement
   *
@@ -115,12 +115,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   *                        |      |      |      |      |      |  |      |      |      |      |      |
   *                        `----------------------------------'  `----------------------------------'
   */
-	 [_RAISE] = LAYOUT(
+      [_RAISE] = LAYOUT(
        _______, _______, KC_PGDN, _______, C(KC_RGHT), C(KC_LEFT),                               KC_DOWN, _______, KC_PGUP, _______, _______, _______,
        _______, _______, _______, KC_LEFT, _______, _______,                                     _______, _______, ENDW,     _______, _______, _______,
        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_UP,   KC_RGHT, _______, _______, _______, _______,
                                   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
-	 ),
+      ),
  /*
   * Layer template
   *
@@ -135,12 +135,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   *                        |      |      |      |      |      |  |      |      |      |      |      |
   *                        `----------------------------------'  `----------------------------------'
   */
-	 [_ADJUST] = LAYOUT(
-	   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                                       KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
-	   _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
-	   _______, _______, _______, _______, QWERTY,  WORKMAN, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-								  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
-	 ),
+      [_ADJUST] = LAYOUT(
+        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                                       KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
+        _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, QWERTY,  WORKMAN, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+                                          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+      ),
 // /*
 //  * Layer template
 //  *
@@ -165,27 +165,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-	return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
+     return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
 
 #ifdef ENCODER_ENABLE
 void encoder_update_user(uint8_t index, bool clockwise) {
-	if (index == 0) {
-		// Volume control
-		if (clockwise) {
-			tap_code(KC_RGHT);
-		} else {
-			tap_code(KC_LEFT);
-		}
-	}
-	else if (index == 1) {
-		// Page up/Page down
-		if (clockwise) {
-			tap_code(KC_DOWN);
-		} else {
-			tap_code(KC_UP);
-		}
-	}
+     if (index == 0) {
+          // Volume control
+          if (clockwise) {
+               tap_code(KC_RGHT);
+          } else {
+               tap_code(KC_LEFT);
+          }
+     }
+     else if (index == 1) {
+          // Page up/Page down
+          if (clockwise) {
+               tap_code(KC_DOWN);
+          } else {
+               tap_code(KC_UP);
+          }
+     }
 }
 #endif
 #ifdef OLED_DRIVER_ENABLE
@@ -196,46 +196,46 @@ bool lastr = false;
 #endif
 bool bksp = false;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	#ifdef CONSOLE_ENABLE
-	uprintf("KL: kc: %u, col: %u, row: %u, pressed: %u, total: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.key.col + 10 * record->event.key.row);
-	#endif 
-	#ifdef OLED_DRIVER_ENABLE
-	if(record->event.pressed){
-		uint8_t n = record->event.key.col + 10 * record->event.key.row;
-		if (n<40) {
-			left = true;
-		} 
-		else {
-			right = true;
-		}
-	}
-	#endif
-	switch (keycode) {
-		case QWERTY:
-			if (record->event.pressed) {
-				set_single_persistent_default_layer(_QWERTY);
-			}
-			return false;
-			break;
-		case WORKMAN:
-			if (record->event.pressed) {
-				set_single_persistent_default_layer(_WORKMAN);
-			}
-			return false;
-			break;
-		case SBKSP:
-			if (record->event.pressed) {
-				register_code(KC_LSFT);
-				bksp = true;
-			}
-			else {
-				unregister_code(KC_LSFT);
-				if (bksp) {
-					tap_code(KC_BSPC);
-				}
-			}
-			return false;
-			break;
+     #ifdef CONSOLE_ENABLE
+     uprintf("KL: kc: %u, col: %u, row: %u, pressed: %u, total: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.key.col + 10 * record->event.key.row);
+     #endif 
+     #ifdef OLED_DRIVER_ENABLE
+     if(record->event.pressed){
+          uint8_t n = record->event.key.col + 10 * record->event.key.row;
+          if (n<40) {
+               left = true;
+          } 
+          else {
+               right = true;
+          }
+     }
+     #endif
+     switch (keycode) {
+          case QWERTY:
+               if (record->event.pressed) {
+                    set_single_persistent_default_layer(_QWERTY);
+               }
+               return false;
+               break;
+          case WORKMAN:
+               if (record->event.pressed) {
+                    set_single_persistent_default_layer(_WORKMAN);
+               }
+               return false;
+               break;
+          case SBKSP:
+               if (record->event.pressed) {
+                    register_code(KC_LSFT);
+                    bksp = true;
+               }
+               else {
+                    unregister_code(KC_LSFT);
+                    if (bksp) {
+                         tap_code(KC_BSPC);
+                    }
+               }
+               return false;
+               break;
         case ENDW:
             if (record->event.pressed) {
                 register_code(KC_LCTL);
@@ -243,15 +243,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 unregister_code(KC_LCTL);
                 tap_code(KC_LEFT);
             }
-	}
-	bksp = false;
-	return true;
+     }
+     bksp = false;
+     return true;
 
 }
 
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-	return OLED_ROTATION_180;
+     return OLED_ROTATION_180;
 }
 
 
@@ -275,8 +275,8 @@ uint8_t current_idle_frame = 0;
 uint8_t current_tap_frame = 0;
 // Credit to obosob for initial animation approach.
 static void render_anim(void) {
-	static const char PROGMEM idle[IDLE_FRAMES][ANIM_SIZE] = {
-		{
+     static const char PROGMEM idle[IDLE_FRAMES][ANIM_SIZE] = {
+          {
 // 'bongo0', 128x56px
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -334,8 +334,8 @@ static void render_anim(void) {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-		},
-		{
+          },
+          {
 // 'bongo1', 128x56px
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -393,10 +393,10 @@ static void render_anim(void) {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-		}
-	};
-	static const char PROGMEM prep[][ANIM_SIZE] = {
-		{
+          }
+     };
+     static const char PROGMEM prep[][ANIM_SIZE] = {
+          {
 // 'bongo2', 128x56px
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -455,11 +455,11 @@ static void render_anim(void) {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
-		}
-	};
-	static const char PROGMEM tap[TAP_FRAMES][ANIM_SIZE] = {
-		{
-	  // 'bongo3', 128x56px
+          }
+     };
+     static const char PROGMEM tap[TAP_FRAMES][ANIM_SIZE] = {
+          {
+       // 'bongo3', 128x56px
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x80, 0x40, 0x60, 0x20, 0x30, 0x30, 0x10, 
@@ -516,9 +516,9 @@ static void render_anim(void) {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-		},
-		{
-			// 'bongo4', 128x56px
+          },
+          {
+               // 'bongo4', 128x56px
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x80, 0x40, 0x60, 0x20, 0x30, 0x30, 0x10, 
@@ -575,8 +575,8 @@ static void render_anim(void) {
 0x1e, 0x3e, 0x3e, 0x7e, 0x7e, 0x1e, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-		},
-		{ 
+          },
+          { 
 // 'bongo5', 128x56px
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -634,92 +634,92 @@ static void render_anim(void) {
 0x1e, 0x3e, 0x3e, 0x7e, 0x7e, 0x1e, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-		}
-	};
+          }
+     };
 
-	//assumes 1 frame prep stage
-	void animation_phase(void) {
-		if(get_current_wpm() <= IDLE_SPEED){
-			current_idle_frame = (current_idle_frame + 1) % IDLE_FRAMES;
-			oled_write_raw_P(idle[abs((IDLE_FRAMES-1)-current_idle_frame)], ANIM_SIZE);
-		} 
-		else {
-			// if  is true 2 frames in a row make it false;
-			if(left && !lastl && right && !lastr) {
-				oled_write_raw_P(tap[2], ANIM_SIZE);
-			} 
-			else if (left && !lastl) {
-				oled_write_raw_P(tap[0], ANIM_SIZE);
-			}  
-			else if (right && !lastr) {
-				oled_write_raw_P(tap[1], ANIM_SIZE);
-			}
-			else {
-				oled_write_raw_P(prep[0], ANIM_SIZE);
-				left = false;
-				right = false;
-			}
-			lastl = left;
-			lastr = right;
-			left = false;
-			right = false;
-		}
-	}
-	if(get_current_wpm() != 000) {
-		oled_on(); // not essential but turns on animation OLED with any alpha keypress
-		if(timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
-			anim_timer = timer_read32();
-			animation_phase();
-		}
-		anim_sleep = timer_read32();
-	} else {
-		if(timer_elapsed32(anim_sleep) > OLED_TIMEOUT) {
-			oled_off();
-		} else {
-			if(timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
-				anim_timer = timer_read32();
-				animation_phase();
-			}
-		}
-	}
+     //assumes 1 frame prep stage
+     void animation_phase(void) {
+          if(get_current_wpm() <= IDLE_SPEED){
+               current_idle_frame = (current_idle_frame + 1) % IDLE_FRAMES;
+               oled_write_raw_P(idle[abs((IDLE_FRAMES-1)-current_idle_frame)], ANIM_SIZE);
+          } 
+          else {
+               // if  is true 2 frames in a row make it false;
+               if(left && !lastl && right && !lastr) {
+                    oled_write_raw_P(tap[2], ANIM_SIZE);
+               } 
+               else if (left && !lastl) {
+                    oled_write_raw_P(tap[0], ANIM_SIZE);
+               }  
+               else if (right && !lastr) {
+                    oled_write_raw_P(tap[1], ANIM_SIZE);
+               }
+               else {
+                    oled_write_raw_P(prep[0], ANIM_SIZE);
+                    left = false;
+                    right = false;
+               }
+               lastl = left;
+               lastr = right;
+               left = false;
+               right = false;
+          }
+     }
+     if(get_current_wpm() != 000) {
+          oled_on(); // not essential but turns on animation OLED with any alpha keypress
+          if(timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
+               anim_timer = timer_read32();
+               animation_phase();
+          }
+          anim_sleep = timer_read32();
+     } else {
+          if(timer_elapsed32(anim_sleep) > OLED_TIMEOUT) {
+               oled_off();
+          } else {
+               if(timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
+                    anim_timer = timer_read32();
+                    animation_phase();
+               }
+          }
+     }
 }
 bool wpm_keycode_user(uint16_t keycode) {
-	return true;
+     return true;
 }
 static void render_logo(void) {
-	oled_set_cursor(0,0);
-	oled_write_P(PSTR(" play asc "), false);
-	oled_set_cursor(3,3);
-	oled_write_P(PSTR(" play asc "), false);
-	oled_set_cursor(6,6);
-	oled_write_P(PSTR(" play asc "), false);
+     oled_set_cursor(0,0);
+     oled_write_P(PSTR(" play asc "), false);
+     oled_set_cursor(3,3);
+     oled_write_P(PSTR(" play asc "), false);
+     oled_set_cursor(6,6);
+     oled_write_P(PSTR(" play asc "), false);
 }
 void oled_task_user(void) {
-	if (is_keyboard_master()) {
-		render_anim();
-		oled_set_cursor(0,7);
-		sprintf(wpm_str, "APM: %03d   ", get_current_wpm());
-		oled_write(wpm_str, false);
-		switch (get_highest_layer(layer_state)) {
-			case _QWERTY:
-				oled_write_ln_P(PSTR("base"), false);
-				break;
-			case _LOWER:
-				oled_write_ln_P(PSTR("LOWER"), false);
-				break;
-			case _RAISE:
-				oled_write_ln_P(PSTR("RAISE"), false);
-				break;
-			case _ADJUST:
-				oled_write_ln_P(PSTR("ADJUST"), false);
-				break;
-			default:
-				oled_write_ln_P(PSTR("Undefined"), false);
-		}
-	} else {
-		render_logo();
-		oled_scroll_left();
-		
-	}
+     if (is_keyboard_master()) {
+          render_anim();
+          oled_set_cursor(0,7);
+          sprintf(wpm_str, "APM: %03d   ", get_current_wpm());
+          oled_write(wpm_str, false);
+          switch (get_highest_layer(layer_state)) {
+               case _QWERTY:
+                    oled_write_ln_P(PSTR("base"), false);
+                    break;
+               case _LOWER:
+                    oled_write_ln_P(PSTR("LOWER"), false);
+                    break;
+               case _RAISE:
+                    oled_write_ln_P(PSTR("RAISE"), false);
+                    break;
+               case _ADJUST:
+                    oled_write_ln_P(PSTR("ADJUST"), false);
+                    break;
+               default:
+                    oled_write_ln_P(PSTR("Undefined"), false);
+          }
+     } else {
+          render_logo();
+          oled_scroll_left();
+          
+     }
 }
 #endif

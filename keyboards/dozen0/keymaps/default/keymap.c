@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |      |      |      |      |      |Lower |
    * `-----------------------------------------'
    */
-	[_BASE] = LAYOUT(
+     [_BASE] = LAYOUT(
     LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), KC_UP, KC_DEL, LT(_RAISE,KC_BSPC),
     KC_LCTL, KC_LSFT, KC_LEFT, KC_DOWN, KC_RGHT, LT(_LOWER,KC_ENT)
   ),

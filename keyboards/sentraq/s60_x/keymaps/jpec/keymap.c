@@ -23,45 +23,45 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_SINS S(KC_INS)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	/* Layout 0: Default Layer
-	* ,-----------------------------------------------------------.
-	* |`  |  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|Backsp |
-	* |-----------------------------------------------------------|
-	* |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|    \|
-	* |-----------------------------------------------------------|
-	* |Ctrl  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|Return  |
-	* |-----------------------------------------------------------|
-	* |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift     |
-	* |-----------------------------------------------------------|
-	* |Fn1 |Gui |Alt |        SpaceFn         |Alt |Gui |App |Ctrl|
-	* `-----------------------------------------------------------'
-	*/
+     /* Layout 0: Default Layer
+     * ,-----------------------------------------------------------.
+     * |`  |  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|Backsp |
+     * |-----------------------------------------------------------|
+     * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|    \|
+     * |-----------------------------------------------------------|
+     * |Ctrl  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|Return  |
+     * |-----------------------------------------------------------|
+     * |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift     |
+     * |-----------------------------------------------------------|
+     * |Fn1 |Gui |Alt |        SpaceFn         |Alt |Gui |App |Ctrl|
+     * `-----------------------------------------------------------'
+     */
     LAYOUT_kc(
-		GRV,  1,    2,    3,    4,    5,    6,    7,    8,    9,    0,    MINS,  EQL, BSPC, BSPC, \
-		TAB,  Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P,    LBRC, RBRC, BSLS, \
-		LCTL, A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN,    QUOT, NUHS, ENT,  \
-		LSFT, NUBS, Z,    X,    C,    V,    B,    N,    M, COMM,  DOT,    SLSH,   NO, RSFT, NO, \
-		MO1,  LGUI, LALT,             SPFN,                         RALT, RGUI, APP,  RCTL),
+          GRV,  1,    2,    3,    4,    5,    6,    7,    8,    9,    0,    MINS,  EQL, BSPC, BSPC, \
+          TAB,  Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P,    LBRC, RBRC, BSLS, \
+          LCTL, A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN,    QUOT, NUHS, ENT,  \
+          LSFT, NUBS, Z,    X,    C,    V,    B,    N,    M, COMM,  DOT,    SLSH,   NO, RSFT, NO, \
+          MO1,  LGUI, LALT,             SPFN,                         RALT, RGUI, APP,  RCTL),
 
-	/* Layout 1: Function Layer
-	* ,-----------------------------------------------------------.
-	* |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Delete |
-	* |-----------------------------------------------------------|
-	* |     |Prv|Ply|Nxt|Stp|   |   |PUp|Up |PDn|   |Slk|Pau|Ins  |
-	* |-----------------------------------------------------------|
-	* |      |Vl-|Mut|Vl+|   |   |Hom|Lef|Dow|Rig|End|   |PEnt    |
-	* |-----------------------------------------------------------|
-	* |        |Prt|Cut|Cop|Pst|Cal|   |   |   |   |   |CapsLock  |
-	* |-----------------------------------------------------------|
-	* |    |    |    |                        |    |    |    |    |
-	* `-----------------------------------------------------------'
-	*/
+     /* Layout 1: Function Layer
+     * ,-----------------------------------------------------------.
+     * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Delete |
+     * |-----------------------------------------------------------|
+     * |     |Prv|Ply|Nxt|Stp|   |   |PUp|Up |PDn|   |Slk|Pau|Ins  |
+     * |-----------------------------------------------------------|
+     * |      |Vl-|Mut|Vl+|   |   |Hom|Lef|Dow|Rig|End|   |PEnt    |
+     * |-----------------------------------------------------------|
+     * |        |Prt|Cut|Cop|Pst|Cal|   |   |   |   |   |CapsLock  |
+     * |-----------------------------------------------------------|
+     * |    |    |    |                        |    |    |    |    |
+     * `-----------------------------------------------------------'
+     */
     LAYOUT_kc(
-		ESC,  F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,   F10,  F11,  F12,  TRNS, DEL,  \
-		TRNS, MPRV, MPLY, MNXT, MSTP, TRNS, TRNS, PGUP, UP,   PGDN, TRNS, SLCK, PAUS, INS,  \
-		TRNS, VOLD, MUTE, VOLU, TRNS, TRNS, HOME, LEFT, DOWN, RGHT, END,  TRNS, TRNS, PENT, \
-		TRNS, TRNS, PSCR, SDEL, CINS, SINS, CALC, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, CAPS, TRNS, \
-		TRNS, TRNS, TRNS,             TRNS,                         TRNS, TRNS, TRNS, TRNS),
+          ESC,  F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,   F10,  F11,  F12,  TRNS, DEL,  \
+          TRNS, MPRV, MPLY, MNXT, MSTP, TRNS, TRNS, PGUP, UP,   PGDN, TRNS, SLCK, PAUS, INS,  \
+          TRNS, VOLD, MUTE, VOLU, TRNS, TRNS, HOME, LEFT, DOWN, RGHT, END,  TRNS, TRNS, PENT, \
+          TRNS, TRNS, PSCR, SDEL, CINS, SINS, CALC, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, CAPS, TRNS, \
+          TRNS, TRNS, TRNS,             TRNS,                         TRNS, TRNS, TRNS, TRNS),
 };
 
 void matrix_init_user(void) {

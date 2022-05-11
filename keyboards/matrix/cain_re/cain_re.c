@@ -21,11 +21,11 @@
 
 void matrix_init_kb(void)
 {
-	setPinOutput(NUM_PIN);
-	setPinOutput(CAPS_PIN);
-	setPinOutput(SCROLL_PIN);
+     setPinOutput(NUM_PIN);
+     setPinOutput(CAPS_PIN);
+     setPinOutput(SCROLL_PIN);
 
-	matrix_init_user();
+     matrix_init_user();
 }
 
 bool led_update_kb(led_t led_state)

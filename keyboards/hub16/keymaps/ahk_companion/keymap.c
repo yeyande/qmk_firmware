@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 KC_F17, KC_F18, KC_F19, KC_F20,
                 KC_F21, KC_F22, KC_F23, KC_F24,
                 OSL(1), OSL(2), OSL(3), TG(4)    //Transparent to let you go between layers
-		),
+          ),
 
         [1] = LAYOUT(
                         KC_MPLY, KC_MUTE,
@@ -144,9 +144,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 void keyboard_post_init_user(void) {
-	//Enable the LED layers
-	rgblight_layers = my_rgb_layers;
-	layer_state_set_user(layer_state);
+     //Enable the LED layers
+     rgblight_layers = my_rgb_layers;
+     layer_state_set_user(layer_state);
 }
 
 void matrix_scan_user(void) {

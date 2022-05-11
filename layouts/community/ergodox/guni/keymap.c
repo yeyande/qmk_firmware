@@ -7,7 +7,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LAYOUT_ergodox(  // layer 0 : default
         // left hand
         KC_EQL  ,  KC_1,    KC_2,   KC_3,   KC_4,   KC_5,   KC_LBRC,
-	MT(MOD_LCTL, KC_TAB) ,  KC_Q,    KC_W,   KC_E,   KC_R,   KC_T,   KC_HOME,
+     MT(MOD_LCTL, KC_TAB) ,  KC_Q,    KC_W,   KC_E,   KC_R,   KC_T,   KC_HOME,
         LT(1, KC_CAPS) ,  KC_A,    KC_S,   KC_D,   KC_F,   KC_G,
         KC_LSFT ,  KC_Z,    KC_X,   KC_C,   KC_V,   KC_B,   KC_PGUP,
         KC_LGUI , KC_GRV,KC_LEFT,KC_RGHT,KC_LALT,
@@ -120,11 +120,11 @@ enum function_id {
  * Fn action definition
  */
 const uint16_t PROGMEM fn_actions[] = {
-   	[0]   =  ACTION_FUNCTION(TEENSY_KEY),                    // FN0 - Teensy key
-	[1]   =  ACTION_LAYER_SET(0, ON_PRESS),              
-	[23]  =  ACTION_LAYER_SET(3, ON_PRESS),
+        [0]   =  ACTION_FUNCTION(TEENSY_KEY),                    // FN0 - Teensy key
+     [1]   =  ACTION_LAYER_SET(0, ON_PRESS),              
+     [23]  =  ACTION_LAYER_SET(3, ON_PRESS),
         [24]  =  ACTION_LAYER_SET(2, ON_PRESS),   
-	[26]  =  ACTION_LAYER_SET(1, ON_PRESS),
+     [26]  =  ACTION_LAYER_SET(1, ON_PRESS),
 };
 
 

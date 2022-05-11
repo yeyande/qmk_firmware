@@ -64,8 +64,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
      
 
-	 
-	 
+      
+      
 // shell navigation layer
 [SHELL_NAV] = LAYOUT_ergodox(
        // left hand
@@ -253,7 +253,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS,
        KC_TRNS,
-	   KC_TRNS, KC_BTN1, KC_BTN2
+        KC_TRNS, KC_BTN1, KC_BTN2
 ),
 
 };
@@ -344,17 +344,17 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
                 return MACRO( T(UP), T(HOME), D(LALT), T(D), U(LALT), END);
             }
         break;                                
-		case SEMICOLON_NEWLINE:
+          case SEMICOLON_NEWLINE:
             if (record->event.pressed) {
                 return MACRO( T(END), T(SCLN), T(ENTER), END);
-            }		
-		break;
-		case END_NEWLINE:
+            }          
+          break;
+          case END_NEWLINE:
             if (record->event.pressed) {
                 return MACRO( T(END), T(ENTER), END);
-            }		
-		break;	
-		
+            }          
+          break;     
+          
         
       }
     return MACRO_NONE;
@@ -386,8 +386,8 @@ void matrix_scan_user(void) {
     switch (layer) {
         case NUMBER:
         case SYMBOL:
-		case BRACKETS:
-		//case SHELL_LAYER:		
+          case BRACKETS:
+          //case SHELL_LAYER:          
             ergodox_right_led_2_on();
             break;
         case KEY_NAV:

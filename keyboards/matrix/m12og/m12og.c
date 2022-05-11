@@ -5,9 +5,9 @@
 #include "m12og.h"
 
 void matrix_init_user(void) {
-	setPinOutput(C6);
-	setPinOutput(B2);
-	setPinOutput(B1);
+     setPinOutput(C6);
+     setPinOutput(B2);
+     setPinOutput(B1);
 }
 
 bool led_update_kb(led_t led_state) {

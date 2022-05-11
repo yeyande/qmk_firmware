@@ -163,7 +163,7 @@ enum userspace_custom_keycodes {
  */ 
 #define _________BABBLE_DELMOV_L1__________________       KC_ESC,  _______, B_RPLACE, B_MSEL,  B_PASTV
 #define _________BABBLE_DELMOV_L2__________________       XXXXXXX, _______, _______,  B_REDO,  B_HUNSPT
-#define _________BABBLE_DELMOV_L3__________________	      B_VUNSPT,B_CUT,   B_COPY,   B_PASTE, B_PRVFM
+#define _________BABBLE_DELMOV_L3__________________           B_VUNSPT,B_CUT,   B_COPY,   B_PASTE, B_PRVFM
 
 #define _________BABBLE_DELMOV_R1__________________       XXXXXXX, B_DSOL,  _______, B_DEOL,  XXXXXXX
 #define _________BABBLE_DELMOV_R2__________________       B_DLW,   KC_BSPC, _______, B_DEL,  B_DRW 

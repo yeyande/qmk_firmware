@@ -45,6 +45,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT_ortho_2x3(/* F13 to F24 */
                  TD(F13F19), TD(F14F20), TD(F15F21),
-		 TD(F16F22), TD(F17F23), TD(F18F24)
-		),
+           TD(F16F22), TD(F17F23), TD(F18F24)
+          ),
 };

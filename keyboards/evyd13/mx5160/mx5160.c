@@ -32,17 +32,17 @@ void matrix_scan_kb(void) {
 }
 
 void led_init_ports(void) {
-	//Set led pin as output, then high (off)
-	
-	//Caps lock
+     //Set led pin as output, then high (off)
+     
+     //Caps lock
     setPinOutput(B1);
     writePinHigh(B1);
-	
-	//Num lock
+     
+     //Num lock
     setPinOutput(B2);
     writePinHigh(B2);
-	
-	//Scroll lock
+     
+     //Scroll lock
     setPinOutput(B3);
     writePinHigh(B3);
 }

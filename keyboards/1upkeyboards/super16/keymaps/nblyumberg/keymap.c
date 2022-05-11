@@ -7,8 +7,8 @@ extern rgblight_config_t rgblight_config;
 
 // Define custom keycodes
 enum my_keycodes {
-	KC_CCCV = SAFE_RANGE,
-	KC_2ENTER
+     KC_CCCV = SAFE_RANGE,
+     KC_2ENTER
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 KC_F17, KC_CCCV, KC_F19, KC_F20,
                 KC_F21, KC_F22, KC_F23, KC_2ENTER,
                 OSL(1), OSL(2), OSL(3), TG(4)    //Transparent to let you go between layers
-		),
+          ),
 
         [1] = LAYOUT_ortho_4x4(
                 LALT(KC_F13), LALT(KC_F14), LALT(KC_F15), LALT(KC_F16),
@@ -65,8 +65,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     tap_code16(LCTL(KC_V));
                 }
             } return true;
-		case KC_2ENTER:
-		    if (record->event.pressed) {
+          case KC_2ENTER:
+              if (record->event.pressed) {
                 enter_timer = timer_read();
             } else {
                 if (timer_elapsed(enter_timer) > TAPPING_TERM) {  // Hold, shift+enter
@@ -75,7 +75,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     tap_code16(KC_F24);
                 }
             } 
-			return true;
+               return true;
         default:
             return true;
     }
@@ -83,8 +83,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 void keyboard_post_init_user(void) {
-	//Enable the LED layers
-	layer_state_set_user(layer_state);
+     //Enable the LED layers
+     layer_state_set_user(layer_state);
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -97,7 +97,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     break;
   case 2:
     // Red
-    rgblight_enable_noeeprom();	
+    rgblight_enable_noeeprom();     
     rgblight_sethsv_noeeprom(HSV_RED);
     break;
   case 3:
@@ -117,10 +117,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_config.raw = eeconfig_read_rgblight();
     //If enabled, set white
     if (rgblight_config.enable) {
-		rgblight_sethsv_noeeprom(HSV_WHITE);
-	} else { //Otherwise go back to disabled
-		rgblight_disable_noeeprom();
-	}
+          rgblight_sethsv_noeeprom(HSV_WHITE);
+     } else { //Otherwise go back to disabled
+          rgblight_disable_noeeprom();
+     }
     break;
 }
 return state;

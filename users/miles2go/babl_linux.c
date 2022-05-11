@@ -48,10 +48,10 @@ bool babblePaste_linux(uint16_t keycode) {
     BABLM(BABL_FIND, SS_LCTL("f"));
     BABLM(BABL_CLOSE_APP, IMALT(X_F4));
     BABLM(BABL_HELP, SS_TAP(X_F1));
-    // BABLM(BABL_FIND_NEXT  (SS_LALT(X_F3))	); //KDE */
+    // BABLM(BABL_FIND_NEXT  (SS_LALT(X_F3))     ); //KDE */
     BABLM(BABL_FIND_NEXT, SS_LCTL("g"));       // Gnome*/
     BABLM(BABL_FIND_PREV, OMSFT(IMCTL(X_G)));  // Gnome*/
-    /* BABLM( BABL_FIND_REPLACE , (SS_LCTL("r"))	); // KDE */
+    /* BABLM( BABL_FIND_REPLACE , (SS_LCTL("r"))     ); // KDE */
     BABLM(BABL_FIND_REPLACE, SS_LCTL("h"));  // Gnome*/
     BABLM(BABL_RUNAPP, IMALT(X_F2));         // Gnome
     BABLM(BABL_SWITCH_APP_NEXT, IMALT(X_TAB));
@@ -59,7 +59,7 @@ bool babblePaste_linux(uint16_t keycode) {
     BABLM(BABL_WINDOW_NEXT, OMCTL(IMALT(X_PGUP)));  // Gnome, sometimes
     BABLM(BABL_WINDOW_PREV, OMCTL(IMALT(X_PGDOWN)));
     BABLM(BABL_WINDOW_NEW, IMCTL(X_N));
-    // BABLM( BABL_HELP,		(SS_TAP(X_F1))	); // NA?
+    // BABLM( BABL_HELP,          (SS_TAP(X_F1))     ); // NA?
     BABLM(BABL_LOCK, OMCTL(IMALT(X_L)));
     BABLM(BABL_SCREENCAPTURE, IMSFT(X_PSCREEN));
 #        endif
@@ -86,12 +86,12 @@ bool babblePaste_linux(uint16_t keycode) {
     BABLM(BABL_APP_SAVE, SS_LCTL("s"));
     // on linux we'd probably use tmux or screen. Some terminal software also
     // allows this.
-    // BABLM( BABL_SPLIT_FRAME_VERT,		()  );
-    // BABLM( BABL_UNSPLIT_FRAME_VERT,		()  );
-    // BABLM( BABL_SPLIT_FRAME_HORIZONTAL, ()	);
+    // BABLM( BABL_SPLIT_FRAME_VERT,          ()  );
+    // BABLM( BABL_UNSPLIT_FRAME_VERT,          ()  );
+    // BABLM( BABL_SPLIT_FRAME_HORIZONTAL, ()     );
     // BABLM( BABL_UNSPLIT_FRAME_HORIZONTAL, () );
-    // BABLM( BABL_NEXT_FRAME, ()	);
-    // BABLM( BABL_PREV_FRAME, ()	);
+    // BABLM( BABL_NEXT_FRAME, ()     );
+    // BABLM( BABL_PREV_FRAME, ()     );
 #        endif
 
     // Todo, ring bell, flash light, show user this isn't supported

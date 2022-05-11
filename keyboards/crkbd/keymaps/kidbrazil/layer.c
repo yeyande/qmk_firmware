@@ -20,7 +20,7 @@ void render_separator(void) {
 
 // Render current layer state
 void render_layer_state(void){
-	// If you want to change the display of OLED, you need to change here
+     // If you want to change the display of OLED, you need to change here
     switch (get_highest_layer(layer_state)){
         case _QWERTY:
             oled_write_ln_P(PSTR("| MODE | QWRTY     ]"), false);
@@ -46,7 +46,7 @@ void render_layer_state(void){
 void render_usb_state(void) {
     switch (USB_DeviceState) {
       case DEVICE_STATE_Unattached:
-			    oled_write_ln_P(PSTR("| USB  | FREE      ]"), false);
+                   oled_write_ln_P(PSTR("| USB  | FREE      ]"), false);
           break;
       case DEVICE_STATE_Suspended:
           oled_write_ln_P(PSTR("| USB  | SLEEP     ]"), false);
